@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="implemented directory images">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Register.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/gabarit.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/gabarit.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="5c47db95-de68-4f18-9a7d-51d6a36e87ed" name="localhost" port="888" />
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
+  <component name="ProjectId" id="1otJgh0HTVnWIuidPlplCQ1t0We" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../151" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="WebServer" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="888">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="" />
+      <created>1614100065486</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614100065486</updated>
+      <workItem from="1614100066663" duration="2120000" />
+      <workItem from="1614589721218" duration="5806000" />
+      <workItem from="1614774897769" duration="4712000" />
+      <workItem from="1614847053591" duration="450000" />
+      <workItem from="1614862065169" duration="634000" />
+      <workItem from="1615187619023" duration="17000" />
+      <workItem from="1615187671385" duration="7953000" />
+      <workItem from="1615717876934" duration="13000" />
+      <workItem from="1615719004560" duration="1963000" />
+      <workItem from="1615983749831" duration="4858000" />
+      <workItem from="1616398672895" duration="18000" />
+      <workItem from="1616590098849" duration="1013000" />
+      <workItem from="1616607469715" duration="2006000" />
+      <workItem from="1616696399690" duration="1003000" />
+      <workItem from="1616851938735" duration="24000" />
+      <workItem from="1616857346672" duration="5214000" />
+      <workItem from="1616922719774" duration="5324000" />
+      <workItem from="1616946582608" duration="1211000" />
+      <workItem from="1616998462731" duration="6707000" />
+      <workItem from="1617085900346" duration="479000" />
+      <workItem from="1617086412606" duration="4146000" />
+      <workItem from="1617096774543" duration="331000" />
+      <workItem from="1617097173937" duration="144000" />
+      <workItem from="1617127341818" duration="2135000" />
+      <workItem from="1617180133488" duration="1293000" />
+      <workItem from="1617191093653" duration="240000" />
+      <workItem from="1617191411325" duration="1136000" />
+      <workItem from="1617192600523" duration="2370000" />
+      <workItem from="1617206949058" duration="1096000" />
+      <workItem from="1617208837901" duration="2197000" />
+      <workItem from="1617211490826" duration="2130000" />
+      <workItem from="1619599813470" duration="1715000" />
+      <workItem from="1619601985386" duration="170000" />
+      <workItem from="1619609673844" duration="1950000" />
+      <workItem from="1619611672734" duration="1907000" />
+    </task>
+    <task id="LOCAL-00001" summary="all modified">
+      <created>1615188393078</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615188393078</updated>
+    </task>
+    <task id="LOCAL-00002" summary="implemented deleting the articles">
+      <created>1617111900235</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1617111900235</updated>
+    </task>
+    <task id="LOCAL-00003" summary="implemented directory images">
+      <created>1617177781102</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617177781102</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Final Version everything works on Shanshes PC">
+      <created>1618845781790</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1618845781790</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="all modified" />
+    <MESSAGE value="implemented better json Encode" />
+    <MESSAGE value="implemented deleting the articles" />
+    <MESSAGE value="implemented directory images" />
+    <MESSAGE value="Final Version everything works on Shanshes PC" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final Version everything works on Shanshes PC" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/controler/annonce.php</url>
+          <line>47</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="index.php">
+        <watch expression="$arrayDef[3]" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
