@@ -77,7 +77,7 @@ ob_start();
                                             <div class="form-group">
                                                 <label for="inputConfirmPassword">Password confirm *</label>
                                                 <input class="form-control" type="password" name="inputUserPswRepeat"
-                                                       id="inputConfirmPassword" placeholder="PasswordConfirm" required>
+                                                       id="inputConfirmPassword" placeholder="Password Confirm" required>
                                             </div>
                                         </div>
                                     </div>

@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="implemented directory images">
+      <change afterPath="$PROJECT_DIR$/../151/controller/Articles.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../151/model/articlesManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../151/view/NewArticles.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../151/view/article-detail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../151/view/article-gestion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../151/view/articles.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../151/view/modifArticles.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../151/view/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/annonce.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/annonce.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/images/enr@cpnv.ch-6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/enr@cpnv.ch-6.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/Register.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/gabarit.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/gabarit.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +30,7 @@
         <entry key="$PROJECT_DIR$/.." value="master" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="PhpServers">
@@ -102,6 +110,7 @@
       <workItem from="1619601985386" duration="170000" />
       <workItem from="1619609673844" duration="1950000" />
       <workItem from="1619611672734" duration="1907000" />
+      <workItem from="1620201722070" duration="2938000" />
     </task>
     <task id="LOCAL-00001" summary="all modified">
       <created>1615188393078</created>
