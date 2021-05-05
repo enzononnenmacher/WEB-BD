@@ -7,6 +7,48 @@
 
 
 
+/*
+ * author : Shanshe Gundishvili
+ * date : 03/01/2021
+ * Goal : to send information of all articles from model to view
+ */
+function all(){
+
+    try{
+        require_once "model/articlesManager.php";
+        //récuperer les articles de la BD envoyés par le modèle
+        $articles = getArticles();
+    }
+    catch (ModelDataException $ex){
+        $articleErrorMessage = "Nous rencontrons temporairement un problème technique pour afficher nos produits. Désolé du dérangement";
+    } finally {
+        require_once "view/articles.php";
+    }
+}
+
+
+
+
+
+/*
+ * author : Shanshe Gundishvili
+ * date : 03/01/2021
+ * Goal : to send information of one particular article
+ */
+function adDetails($code){
+
+    try{
+        require_once  "model/articlesManager.php";
+        //récuperer les articles de la BD envoyés par le modèle
+        $article = getArticleDetail ($code);
+    }catch(ModelDataException $ex){
+        $articleErrorMessages = "Nous rencontrons temporairement des problèmes technique pour afficher nos produits";
+    } finally {
+        require_once "view/article-detail.php";
+    }
+
+}
+
 
 
 
@@ -15,27 +57,29 @@
  * date : 03/01/2021
  * Goal : to send new article's info to model
  */
-function annonce($data){
+function creationAnnonce($data){
 
-    require "model/annonceManager.php";
-    annonceToJson($data);
-    require "view/home.php";
+    try {
+        if(isset($data['code'])) {
+            require_once "model/articlesManager.php";
+            createArticle($data['code'], $data['brand'], $data['model'], $data['snowLength'], $data['audience'], $data['qtyAvailable'], $data['description'], $data['price'], $data['descriptionFull'], $data['level'], $data['photo'], $data['active']);
+
+        }
+        else{
+            require_once "view/add-FormArticles.php";
+        }
+
+    }catch (ModelDataException $ex){
+        $articleErrorMessage = "coin";
+    } finally {
+        $articles = getArticles();
+        require_once "view/articles-admin.php";
+    }
 
 }
 
 
-/*
- * author : Shanshe Gundishvili
- * date : 03/01/2021
- * Goal : to send information of all articles from model to view
- */
-function all(){
 
-    require "model/annonceManager.php";
-    $temp = jsonToAnnonce();
-    $articles = array_reverse($temp);
-    require "view/all.php";
-}
 
 
 /*
@@ -46,7 +90,7 @@ function all(){
 function myAd($email){
 
     require "model/annonceManager.php";
-    $temp = jsonToMyAnnonce($email);
+    $temp = bdToMyAnnonce($email);
     if(isset($temp)){
     $articles = array_reverse($temp);
     require "view/myAd.php";
@@ -57,18 +101,7 @@ function myAd($email){
 }
 
 
-/*
- * author : Shanshe Gundishvili
- * date : 03/01/2021
- * Goal : to send information of one particular article
- */
-function adDetails($ID){
 
-    require "model/annonceManager.php";
-    $article = detailForAd($ID);
-    require "view/adDetails.php";
-
-}
 
 
 /*
@@ -76,12 +109,21 @@ function adDetails($ID){
  * date : 03/01/2021
  * Goal : to send info of one particular article that client user wants to modify
  */
-function modifyForm($data , $code){
+function modifyForm($codeInitial){
 
-    require "model/annonceManager.php";
-    modifAnn($data, $code);
-    $articles = jsonToMyAnnonce($_SESSION['userEmailAddress']);
-    require "view/myAd.php";
+    try{
+        require_once "model/articlesManager.php";
+        $articles = getArticles();
+        foreach ($articles as $temp){
+            if($temp['code'] == $codeInitial){
+                $article = $temp;
+            }
+        }
+    }catch(ModelDataException $ex){
+        $articleErrorMessages = "delete";
+    } finally {
+        require_once "view/article-FormModify.php";
+    }
 
 }
 
@@ -90,11 +132,17 @@ function modifyForm($data , $code){
  * date : 03/01/2021
  * Goal : to send the information that client user modified in one particular article
  */
-function modifyAnnonce($ID){
+function modifyAnnonce($codeInitial ,$data){
 
-        require "model/annonceManager.php";
-        $article = detailForAd($ID);
-        require "view/modifyAd.php";
+    try {
+        require_once "model/articlesManager.php";
+        updateArticle($codeInitial ,$data['code'], $data['brand'], $data['model'], $data['snowLength'], $data['audience'], $data['qtyAvailable'], $data['description'], $data['price'], $data['descriptionFull'], $data['level'], $data['photo'], $data['active']);
+        $articles = getArticles();
+    }catch(ModelDataException $ex){
+        $articleErrorMessages = "delete";
+    } finally {
+        require_once "view/articles-admin.php";
+    }
 
 }
 
@@ -108,7 +156,7 @@ function deleteArt($ID){
 
     require "model/annonceManager.php";
     deleteAnn($ID);
-    $articles = jsonToMyAnnonce($_SESSION['userEmailAddress']);
+    $articles = bdToMyAnnonce($_SESSION['userEmailAddress']);
     require "view/myAd.php";
 
 }

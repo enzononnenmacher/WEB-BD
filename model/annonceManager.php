@@ -66,30 +66,15 @@ function imageSave($ID){
 function annonceToJson($data)
 {
 
-    $arr['eee'] = "aweqw";
-    $arr = json_decode(file_get_contents("data/annonce.json"), true);
 
-    $count = 0;
-    if ($arr) {
-        foreach ($arr as $rand) {
-            $count++;
-        }
-    }
-
-    $new['Email'] = $_SESSION['userEmailAddress'];
-    $new['active'] = true;
-    $new['ID'] = $count;
+    $snowDetail="SELECT code, brand, model, snowLength, price, qtyAvailable, photo, active, description, descriptionFull FROM snows WHERE code='".$data."'";
 
 
 
-    $data['Email'] = $new['Email'];
-    $data['active'] = $new['active'];
-    $data['ID'] = $new['ID'];
-    $filePlacement = imageSave($data['ID']);
-    $data['inputPictures'] = $filePlacement;
+    require_once "model/dbConnector.php";
 
-    array_push($arr, $data);
-    file_put_contents("data/annonce.json", json_encode($arr));
+    $result=executeQuerySelect($snowDetail);
+    return $result[0];
 }
 
 
@@ -130,39 +115,12 @@ function deleteAnn($IDToDEL)
  */
 function modifAnn($toInsert, $IDToDEL)
 {
-    $arrayDef['eee'] = "aweqw";
-    $arrayDef = json_decode(file_get_contents("data/annonce.json"), true);
-    $count = 0;
-    foreach ($arrayDef as $article) {
+    $v = ',';
+    $str = '"';
+    $snowUpdate = 'UPDATE snows SET '."code =".$str.$codeNew.$str.", brand =".$str.$brand.$str.", model =".$str.$model.$str.", snowLength =".$snowLength.", audience =".$str.$audience.$str.", qtyAvailable =".$qtyAvailable.", description =".$str.$description.$str.", price =".$price.", descriptionFull =".$str.$descriptionFull.$str.", level =".$str.$level.$str.", photo =".$str.$photo.$str.", active =".$active." WHERE code =" .$str.$code.$str.';';
 
-
-        if ($article['ID'] == $IDToDEL) {
-
-
-
-            $article['inputName'] = $toInsert['inputName'];
-            $article['inputAddress'] = $toInsert['inputAddress'];
-            $article['inputNPA'] = $toInsert['inputNPA'];
-            $article['inputCity'] = $toInsert['inputCity'];
-            $article['inputNameAnnonce'] = $toInsert['inputNameAnnonce'];
-            $article['inputDescription'] = $toInsert['inputDescription'];
-            $article['inputAvailableDate'] = $toInsert['inputAvailableDate'];
-            $article['inputPrice'] = $toInsert['inputPrice'];
-
-
-
-            if ($_FILES['inputPictures']['size']!= 0) {
-                $filePlacement = imageSave($IDToDEL);
-                $article['inputPictures'] = $filePlacement;
-            }
-            $finalRes = $article;
-            $placeInArr = $count;
-            $arrayDef[$placeInArr] = $finalRes;
-            file_put_contents("data/annonce.json", json_encode($arrayDef));
-
-        }
-        $count++;
-    }
+    require_once "model/dbConnector.php";
+    return executeQueryInsert($snowUpdate);
 }
 
 
@@ -173,11 +131,15 @@ function modifAnn($toInsert, $IDToDEL)
  */
 function jsonToAnnonce()
 {
-    $arrayDef['eee'] = "aweqw";
-    $arrayDef = json_decode(file_get_contents("data/annonce.json"), true);
+    $results= false;
+    $strSeparator = '\'';
+
+    $snowQuery='SELECT code, brand, model, snowLength, price, qtyAvailable, photo, active FROM snows';
+
+    require_once "model/dbConnector.php";
 
 
-    return $arrayDef;
+    return executeQuerySelect($snowQuery);
 }
 
 
@@ -186,26 +148,17 @@ function jsonToAnnonce()
  * date : 03/01/2021
  * Goal : to only send the articles made by user that is logged in on the side by device
  */
-function jsonToMyAnnonce($email)
+function bdToMyAnnonce($email)
 {
 
-    $arr['eee'] = "aweqw";
-    $arr = json_decode(file_get_contents("data/annonce.json"), true);
-    $count = 0;
+    $snowDetail="SELECT code, brand, model, snowLength, price, qtyAvailable, photo, active, description, descriptionFull FROM snows WHERE Email='".$email."'";
 
 
-    foreach ($arr as $ann) {
-        if ($ann['Email'] == $email) {
 
-            $resArr[$count] = $ann;
-            $count++;
-        }
-    }
+    require_once "model/dbConnector.php";
 
-    if(isset($resArr)){
-    return $resArr;}else{
-    return null;
-    }
+    $result=executeQuerySelect($snowDetail);
+    return $result[0];
 }
 
 /*
@@ -215,17 +168,13 @@ function jsonToMyAnnonce($email)
  */
 function detailForAd($ID)
 {
-    $details['dfghj'] = "ghjkl";
-    $details = json_decode(file_get_contents("data/annonce.json"), true);
+    $snowDetail="SELECT code, brand, model, snowLength, price, qtyAvailable, photo, active, description, descriptionFull FROM snows WHERE code='".$code."'";
 
-    foreach ($details as $detail) {
-        if ($detail['ID'] == $ID) {
 
-            return $detail;
 
-        }
-    }
-    $error = "error";
-    return $error;
+    require_once "model/dbConnector.php";
+
+    $result=executeQuerySelect($snowDetail);
+    return $result[0];
 }
 

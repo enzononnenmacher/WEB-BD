@@ -39,7 +39,7 @@ if (isset($_GET['action'])) {
             createAd();
             break;
         case 'annonce' :
-            annonce($_POST);
+            creationAnnonce($_POST);
             break;
         case 'contact' :
             contact();
