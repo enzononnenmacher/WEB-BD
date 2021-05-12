@@ -10,11 +10,7 @@
       <change afterPath="$PROJECT_DIR$/../151/view/articles.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../151/view/modifArticles.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../151/view/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/annonce.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/annonce.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/enr@cpnv.ch-6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/enr@cpnv.ch-6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Register.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +107,8 @@
       <workItem from="1619609673844" duration="1950000" />
       <workItem from="1619611672734" duration="1907000" />
       <workItem from="1620201722070" duration="2938000" />
+      <workItem from="1620225488328" duration="867000" />
+      <workItem from="1620284285762" duration="2035000" />
     </task>
     <task id="LOCAL-00001" summary="all modified">
       <created>1615188393078</created>
