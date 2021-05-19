@@ -18,6 +18,11 @@ function home()
         require "view/home.php";
 }
 
+function regForm()
+{
+    require "view/Register.php";
+}
+
 // Calls about page
 function about()
 {

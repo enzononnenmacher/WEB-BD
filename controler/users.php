@@ -35,6 +35,8 @@ function login($loginRequest)
     }
 }
 
+
+
 function logout()
 {
     $_SESSION = array();
@@ -44,13 +46,12 @@ function logout()
 
 function register($registerRequest)
 {
-    if(isset($registerRequest)) {
         try {
             if (isset($registerRequest['inputUserEmailAddress']) && isset($registerRequest['inputUserPsw']) && isset($registerRequest['inputUserPswRepeat'])) {
 
                 $userEmailAddress = $registerRequest['inputUserEmailAddress'];
                 $userPsw = $registerRequest['inputUserPsw'];
-                $userPswRepeat = $registerRequest['inputUserPswCheck'];
+                $userPswRepeat = $registerRequest['inputUserPswRepeat'];
 
                 //check passwords are same
                 if ($userPsw == $userPswRepeat) {
@@ -66,16 +67,12 @@ function register($registerRequest)
                     $registerErrorMessage = "passwords are different";
                     require_once "view/register.php";
                 }
-
+                require_once "view/register.php";
             }
-
         } catch (ModelDataBaseException $ex) {
             $registerErrorMessage = "we are dead";
             return "view/lost.php";
         }
-    }else{
-        require_once "view/register.php";
-    }
 }
 
 

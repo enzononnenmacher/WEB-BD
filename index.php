@@ -27,7 +27,11 @@ if (isset($_GET['action'])) {
             logout();
             break;
         case 'register' :
-            register($_POST);
+            if(isset($_POST['inputUserEmailAddress'])){
+                register($_POST);
+            }else{
+                regForm();
+            }
             break;
         case 'about' :
             about();

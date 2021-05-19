@@ -33,7 +33,8 @@ function registerNewAccount($userEmailAddress, $userPsw){
     $result=false;
     $strSeparator = '\'';
     $userHashPsw = password_hash($userPsw, PASSWORD_DEFAULT);
-    $registerQuery ="INSERT INTO users (email, password) VALUES(" . $userEmailAddress. ", ". $userHashPsw . ")";
+    $registerQuery ="INSERT INTO users (email, password, userType) VALUES(" .$strSeparator. $userEmailAddress.$strSeparator. ", ".$strSeparator. $userHashPsw .$strSeparator.", " . 0 . ")";
+    require_once "model/dbConnector.php";
     $queryResult=executeQueryInsert($registerQuery);
     if($queryResult){
         $result = $queryResult;
