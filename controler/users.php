@@ -21,11 +21,13 @@ function login($loginRequest)
         {
             getUserType($userEmailAddress);
             $_SESSION['userEmailAddress']=$userEmailAddress;
+            $error = 0;
             require "view/home.php";
 
         }
         else
         {
+            $error = 1;
             require "view/login.php";
         }
     }
