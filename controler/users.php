@@ -10,6 +10,7 @@
 
 function login($loginRequest)
 {
+    $error = 0;
     if (isset($loginRequest['inputUserEmailAddress']) && isset($loginRequest['inputUserPsw'])){
         $userEmailAddress = $loginRequest['inputUserEmailAddress'];
         $userPsw = $loginRequest['inputUserPsw'];

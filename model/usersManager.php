@@ -17,7 +17,7 @@ function isLoginCorrect($userEmailAddress, $userPsw)
 
     $queryResult = executeQuerySelect($loginQuery);
 
-    if (isset($queryResult)){
+    if (isset($queryResult[0]['password'])){
 
         //Recuperation du password de la BD
         $userPswHash = $queryResult[0]['password'];

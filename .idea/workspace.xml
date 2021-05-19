@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="implemented directory images" />
+    <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="implemented directory images">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_03_2021_08_11__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_03_2021_08_11__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controler/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/controler/users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/usersManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/usersManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Login.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,8 +54,13 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\project-web\WEB-BD\model" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="WebServer" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="888">
@@ -213,7 +224,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/controler/users.php</url>
-          <line>62</line>
+          <line>63</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
