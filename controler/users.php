@@ -52,22 +52,32 @@ function register($registerRequest)
                 $userEmailAddress = $registerRequest['inputUserEmailAddress'];
                 $userPsw = $registerRequest['inputUserPsw'];
                 $userPswRepeat = $registerRequest['inputUserPswRepeat'];
+                require_once "model/usersManager.php";
+                $check = checkRegister($userEmailAddress);
+                if(!(isset($check[0][0]))) {
+                    $registerErrorMessage = null;
+                    //check passwords are same
+                    if ($userPsw == $userPswRepeat) {
+                        $registerPswErrorMessage = null;
+                        require_once "model/usersManager.php";
+                        if (registerNewAccount($userEmailAddress, $userPsw)) {
+                            $_SESSION['userEmailAddress'] = $userEmailAddress;
+                            require_once "controler/annonce.php";
+                            home();
 
-                //check passwords are same
-                if ($userPsw == $userPswRepeat) {
-                    require_once "model/usersManager.php";
-                    if (registerNewAccount($userEmailAddress, $userPsw)) {
-                        $_SESSION['userEmailAddress'] = $userEmailAddress;
-                        $registerErrorMessage = null;
+                        } else {
+                            $registerErrorMessage = "our developers don't know the reason of this error";
+                            require_once "view/register.php";
+                        }
                     } else {
-                        $registerErrorMessage = "our developers don't know the reason of this error";
+                        $registerPswErrorMessage = "passwords are different";
                         require_once "view/register.php";
                     }
-                } else {
-                    $registerErrorMessage = "passwords are different";
+                }else{
+                    $registerErrorMessage = "Email already exists";
                     require_once "view/register.php";
                 }
-                require_once "view/register.php";
+                require_once "view/home.php";
             }
         } catch (ModelDataBaseException $ex) {
             $registerErrorMessage = "we are dead";

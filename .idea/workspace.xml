@@ -5,8 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controler/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/controler/navigation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controler/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/controler/users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/usersManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/usersManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/home.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +111,7 @@
       <workItem from="1620219840938" duration="230000" />
       <workItem from="1620220081051" duration="1480000" />
       <workItem from="1620806236531" duration="2762000" />
-      <workItem from="1621410863320" duration="7520000" />
+      <workItem from="1621410863320" duration="12116000" />
     </task>
     <task id="LOCAL-00001" summary="all modified">
       <created>1615188393078</created>
@@ -155,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621416372095</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="wip .2">
+      <created>1621425032751</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1621425032751</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +203,19 @@
     <MESSAGE value="Final Version everything works on Shanshes PC" />
     <MESSAGE value="shanchinio" />
     <MESSAGE value="wip" />
-    <option name="LAST_COMMIT_MESSAGE" value="wip" />
+    <MESSAGE value="wip .2" />
+    <option name="LAST_COMMIT_MESSAGE" value="wip .2" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/controler/users.php</url>
+          <line>62</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -36,9 +36,8 @@ function registerNewAccount($userEmailAddress, $userPsw){
     $registerQuery ="INSERT INTO users (email, password, userType) VALUES(" .$strSeparator. $userEmailAddress.$strSeparator. ", ".$strSeparator. $userHashPsw .$strSeparator.", " . 0 . ")";
     require_once "model/dbConnector.php";
     $queryResult=executeQueryInsert($registerQuery);
-    if($queryResult){
-        $result = $queryResult;
-    }
+
+    $result = 1;
     return $result;
 }
 
@@ -49,12 +48,24 @@ function getUserType($userEmailAddress)
     $strSeparator = '\'';
     $userTypeQuery = 'SELECT userType FROM users WHERE email='.$strSeparator.$userEmailAddress.$strSeparator.";";
 
-
+    require_once "model/dbConnector.php";
     $queryResult = executeQuerySelect($userTypeQuery);
 
     if(isset($queryResult)){
         if($queryResult[0]['userType']==1) $_SESSION['userType']=1;
         elseif ($queryResult[0]['userType']==0) $_SESSION['userType']=0;
     }
+}
+
+function checkRegister($email){
+
+    $strSeparator = '\'';
+    $userTypeQuery = 'SELECT email FROM users WHERE email='.$strSeparator.$email.$strSeparator.";";
+
+    require_once "model/dbConnector.php";
+    $queryResult = executeQuerySelect($userTypeQuery);
+
+    return $queryResult;
+
 }
 

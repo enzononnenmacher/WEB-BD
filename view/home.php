@@ -55,6 +55,7 @@ ob_start();
     <section class="section background-white">
         <div class="line">
             <div class="margin">
+                <!--
                 <?php $count = 0; ?>
                 <?php foreach ($articles as $article) : ?>
                     <?php if (($article['active'] == true) && ($count <= 2)) : ?>
@@ -70,6 +71,7 @@ ob_start();
 
                     <?php endif; ?>
                 <?php endforeach; ?>
+                --!>
             </div>
         </div>
     </section>
