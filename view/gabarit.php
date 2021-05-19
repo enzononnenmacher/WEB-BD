@@ -44,9 +44,10 @@
               <li><a href="index.php?action=all">Annonces</a></li>
                 <li><a href="index.php?action=contact">Contact</a></li>
                 <?php if(isset($_SESSION['userEmailAddress'])): ?>
-                    <li><a href="index.php?action=logout">Déconnexion / <?= $_SESSION['userEmailAddress'] ?></a></li>
                     <li><a href="index.php?action=myAd">Mes annonces</a></li>
                     <li><a href="index.php?action=createAd">Créer une annonce</a></li>
+                    <li><a href="index.php?action=modifUserInfo"><?= $_SESSION['userEmailAddress'] ?></a></li>
+                    <li><a href="index.php?action=logout">Déconnexion</a></li>
                 <?php elseif(!isset($_SESSION['userEmailAddress'])): ?>
                     <li><a href="index.php?action=login">Connexion</a></li>
                     <li><a href="index.php?action=register">S'inscrire</a></li>

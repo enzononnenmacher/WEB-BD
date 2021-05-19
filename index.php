@@ -29,6 +29,9 @@ if (isset($_GET['action'])) {
         case 'register' :
             register($_POST);
             break;
+        case 'modifUserInfo' :
+            modifUserInfo();
+            break;
         case 'about' :
             about();
             break;
