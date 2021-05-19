@@ -117,7 +117,7 @@ function modifAnn($toInsert, $IDToDEL)
 {
     $v = ',';
     $str = '"';
-    $snowUpdate = 'UPDATE snows SET '."code =".$str.$codeNew.$str.", brand =".$str.$brand.$str.", model =".$str.$model.$str.", snowLength =".$snowLength.", audience =".$str.$audience.$str.", qtyAvailable =".$qtyAvailable.", description =".$str.$description.$str.", price =".$price.", descriptionFull =".$str.$descriptionFull.$str.", level =".$str.$level.$str.", photo =".$str.$photo.$str.", active =".$active." WHERE code =" .$str.$code.$str.';';
+    $snowUpdate = 'UPDATE coloSwiss SET '."code =".$str.$codeNew.$str.", brand =".$str.$brand.$str.", model =".$str.$model.$str.", snowLength =".$snowLength.", audience =".$str.$audience.$str.", qtyAvailable =".$qtyAvailable.", description =".$str.$description.$str.", price =".$price.", descriptionFull =".$str.$descriptionFull.$str.", level =".$str.$level.$str.", photo =".$str.$photo.$str.", active =".$active." WHERE code =" .$str.$code.$str.';';
 
     require_once "model/dbConnector.php";
     return executeQueryInsert($snowUpdate);
@@ -134,7 +134,7 @@ function jsonToAnnonce()
     $results= false;
     $strSeparator = '\'';
 
-    $snowQuery='SELECT code, brand, model, snowLength, price, qtyAvailable, photo, active FROM snows';
+    $snowQuery='SELECT code, brand, model, snowLength, price, qtyAvailable, photo, active FROM ';
 
     require_once "model/dbConnector.php";
 
@@ -151,7 +151,7 @@ function jsonToAnnonce()
 function bdToMyAnnonce($email)
 {
 
-    $snowDetail="SELECT code, brand, model, snowLength, price, qtyAvailable, photo, active, description, descriptionFull FROM snows WHERE Email='".$email."'";
+    $snowDetail="SELECT code, brand, model, snowLength, price, qtyAvailable, photo, active, description, descriptionFull FROM  WHERE Email='".$email."'";
 
 
 
@@ -168,13 +168,13 @@ function bdToMyAnnonce($email)
  */
 function detailForAd($ID)
 {
-    $snowDetail="SELECT code, brand, model, snowLength, price, qtyAvailable, photo, active, description, descriptionFull FROM snows WHERE code='".$code."'";
+    $Detail="SELECT code, brand, model, snowLength, price, qtyAvailable, photo, active, description, descriptionFull FROM snows WHERE code='".$code."'";
 
 
 
     require_once "model/dbConnector.php";
 
-    $result=executeQuerySelect($snowDetail);
+    $result=executeQuerySelect($Detail);
     return $result[0];
 }
 
