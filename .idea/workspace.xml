@@ -4,9 +4,10 @@
     <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="implemented directory images">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_03_2021_08_11__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_03_2021_08_11__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controler/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/controler/users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/usersManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/usersManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Register.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/css/responsee.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/css/responsee.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/gabarit.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/gabarit.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +60,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projet web\prospera-template\WEB-BD\view" />
       <recent name="C:\project-web\WEB-BD\model" />
     </key>
   </component>
@@ -117,6 +119,8 @@
       <workItem from="1620220081051" duration="1480000" />
       <workItem from="1620806236531" duration="2762000" />
       <workItem from="1621410863320" duration="12513000" />
+      <workItem from="1621521960707" duration="41000" />
+      <workItem from="1621522043691" duration="215000" />
     </task>
     <task id="LOCAL-00001" summary="all modified">
       <created>1615188393078</created>

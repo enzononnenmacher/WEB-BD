@@ -73,7 +73,7 @@ ob_start();
                                                     <input class="form-control" type="password" name="inputUserPsw"
                                                            id="inputPassword" placeholder="Password" required>
                                                     <?php if($error == 1): ?>
-                                                        <p>Mot de passe et/ou email incorrect</p>
+                                                        <p class="msgError">Mot de passe et/ou email incorrect</p>
                                                     <?php elseif(!isset($loginErrorMessage)): ?>
 
                                                     <?php endif; ?>

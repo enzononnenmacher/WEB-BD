@@ -1142,6 +1142,11 @@ nav.breadcrumb-nav ul li:last-child:after {content:"";}
   transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
+.msgError {
+  color : rgb(255,0,0) !important;
+  font-size: 25px;
+}
+
 .zoom2 {
   transition: transform .2s; /* Animation */
   width: 300px;

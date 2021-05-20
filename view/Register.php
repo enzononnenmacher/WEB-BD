@@ -82,10 +82,10 @@ ob_start();
                                         </div>
                                     </div>
                                     <?php if(isset($registerErrorMessage)): ?>
-                                        <p>Email déjà utilisé</p>
+                                        <p class="msgError">Email déjà utilisé</p>
                                     <?php elseif(!isset($registerErrorMessage)): ?>
                                         <?php if(isset($registerPswErrorMessage)): ?>
-                                            <p>Mot de passe identique</p>
+                                            <p class="msgError">Mot de passe identique</p>
                                         <?php elseif(!isset($registerPswErrorMessage)): ?>
 
                                         <?php endif; ?>
