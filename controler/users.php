@@ -89,3 +89,15 @@ function register($registerRequest)
 }
 
 
+
+
+function modifyUserPass($request){
+    $endToken = array();
+    if(isset($_SESSION['userEmailAddress']) && isset($registerRequest['inputUserPsw']) && isset($registerRequest['inputUserPswRepeat'])){
+
+    }
+    else { //donnes non remplies
+
+        require "view/login.php";
+    }
+}
