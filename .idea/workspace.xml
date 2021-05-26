@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="implemented directory images">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_03_2021_08_11__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_03_2021_08_11__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Register.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/css/responsee.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/css/responsee.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/gabarit.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/gabarit.php" afterDir="false" />
-    </list>
+    <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="implemented directory images" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,6 +114,7 @@
       <workItem from="1621410863320" duration="12513000" />
       <workItem from="1621521960707" duration="41000" />
       <workItem from="1621522043691" duration="215000" />
+      <workItem from="1622015723093" duration="443000" />
     </task>
     <task id="LOCAL-00001" summary="all modified">
       <created>1615188393078</created>

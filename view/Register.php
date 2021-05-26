@@ -85,7 +85,7 @@ ob_start();
                                         <p class="msgError">Email déjà utilisé</p>
                                     <?php elseif(!isset($registerErrorMessage)): ?>
                                         <?php if(isset($registerPswErrorMessage)): ?>
-                                            <p class="msgError">Mot de passe identique</p>
+                                            <p class="msgError">Mot de passe non identique</p>
                                         <?php elseif(!isset($registerPswErrorMessage)): ?>
 
                                         <?php endif; ?>
