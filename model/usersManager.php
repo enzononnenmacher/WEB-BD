@@ -69,3 +69,28 @@ function checkRegister($email){
 
 }
 
+
+function modifyUserPassM($email, $password){
+
+    $result=false;
+    $strSeparator = '\'';
+    $userHashPsw = password_hash($password, PASSWORD_DEFAULT);
+    $Query ="UPDATE users SET password =" . $strSeparator . $userHashPsw . $strSeparator . " WHERE email =". $strSeparator . $email . $strSeparator. ";";
+    require_once "model/dbConnector.php";
+    $queryResult=executeQueryInsert($Query);
+
+    $result = 1;
+    return $result;
+}
+
+function modifyUserEmailM($FEmail, $NEmail){
+
+    $result=false;
+    $strSeparator = '\'';
+    $Query ="UPDATE users SET email =" . $strSeparator . $FEmail . $strSeparator . " WHERE email =". $strSeparator . $NEmail . $strSeparator. ";";
+    require_once "model/dbConnector.php";
+    $queryResult=executeQueryInsert($Query);
+
+    $result = 1;
+    return $result;
+}
