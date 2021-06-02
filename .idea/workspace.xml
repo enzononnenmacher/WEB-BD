@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="Added 4 new functions for updating user Email and User password, 2 in controller, 2 in Model">
+    <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="connected last commit to view everything works">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controler/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/controler/navigation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controler/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/controler/users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/usersManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/usersManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/modifUserInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/modifUserInfo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controler/annonce.php" beforeDir="false" afterPath="$PROJECT_DIR$/controler/annonce.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/annonceManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/annonceManager.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +24,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="localhost" id="5c47db95-de68-4f18-9a7d-51d6a36e87ed" name="localhost" port="888" />
@@ -125,7 +123,9 @@
       <workItem from="1622376029110" duration="850000" />
       <workItem from="1622527522819" duration="378000" />
       <workItem from="1622527923204" duration="62000" />
-      <workItem from="1622635852010" duration="5606000" />
+      <workItem from="1622635852010" duration="5688000" />
+      <workItem from="1622653305705" duration="322000" />
+      <workItem from="1622653752330" duration="5380000" />
     </task>
     <task id="LOCAL-00001" summary="all modified">
       <created>1615188393078</created>
@@ -204,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622376865420</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="connected last commit to view everything works">
+      <created>1622646271014</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1622646271014</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,20 +257,21 @@
     <MESSAGE value="fixed bad error message" />
     <MESSAGE value="wip update user psw and email" />
     <MESSAGE value="Added 4 new functions for updating user Email and User password, 2 in controller, 2 in Model" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added 4 new functions for updating user Email and User password, 2 in controller, 2 in Model" />
+    <MESSAGE value="connected last commit to view everything works" />
+    <option name="LAST_COMMIT_MESSAGE" value="connected last commit to view everything works" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/index.php</url>
-          <line>37</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/controler/users.php</url>
           <line>14</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/model/annonceManager.php</url>
+          <line>176</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -63,18 +63,18 @@ function imageSave($ID){
  * date : 03/01/2021
  * Goal : to save information filled by User
  */
-function annonceToJson($data)
+function createArticle($inputName, $inputAddress, $inputNPA, $inputCity, $inputNameAnnonce, $inputDescription, $inputAvailableDate, $inputPrice)
 {
+    $active = 1;
+    $userID = getId();
+    $v = ',';
+    $s = '"';
 
-
-    $snowDetail="SELECT code, brand, model, snowLength, price, qtyAvailable, photo, active, description, descriptionFull FROM snows WHERE code='".$data."'";
-
-
+    $snowDetail="INSERT INTO ads (owner, address, NPA, city, title, description, disponibility, price, active, users_id) VALUES(". $s .$inputName. $s . $v . $s . $inputAddress. $s . $v . $inputNPA . $v . $s . $inputCity. $s . $v . $s . $inputNameAnnonce. $s . $v . $s . $inputDescription. $s . $v .$s. $inputAvailableDate.$s. $v . $inputPrice. $v . $active. $v . 6 .");";
 
     require_once "model/dbConnector.php";
+    $result=executeQueryInsert($snowDetail);
 
-    $result=executeQuerySelect($snowDetail);
-    return $result[0];
 }
 
 
@@ -151,7 +151,7 @@ function jsonToAnnonce()
 function bdToMyAnnonce($email)
 {
 
-    $snowDetail="SELECT code, brand, model, snowLength, price, qtyAvailable, photo, active, description, descriptionFull FROM  WHERE Email='".$email."'";
+    $snowDetail="SELECT inputName, inputAddress, inputNPA, inputCity, inputNameAnnonce, inputDescription, inputAvailableDate, inputPictures, inputPrice FROM ads WHERE email='".$email."'";
 
 
 
@@ -161,6 +161,23 @@ function bdToMyAnnonce($email)
     return $result[0];
 }
 
+
+
+function getId(){
+
+
+    $email = $_SESSION['userEmailAddress'];
+    $snowDetail="SELECT id FROM users WHERE email='".$email."'";
+
+    require_once "model/dbConnector.php";
+
+    $result=executeQuerySelect($snowDetail);
+    return $result[0];
+}
+
+
+
+
 /*
  * author : Shanshe Gundishvili
  * date : 03/01/2021
@@ -168,7 +185,7 @@ function bdToMyAnnonce($email)
  */
 function detailForAd($ID)
 {
-    $Detail="SELECT code, brand, model, snowLength, price, qtyAvailable, photo, active, description, descriptionFull FROM snows WHERE code='".$code."'";
+    $Detail="SELECT code, brand, model, snowLength, price, qtyAvailable, photo, active, description, descriptionFull FROM snows WHERE id='".$ID."'";
 
 
 

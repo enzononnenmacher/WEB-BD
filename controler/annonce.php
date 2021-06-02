@@ -60,20 +60,18 @@ function adDetails($code){
 function creationAnnonce($data){
 
     try {
-        if(isset($data['code'])) {
-            require_once "model/articlesManager.php";
-            createArticle($data['code'], $data['brand'], $data['model'], $data['snowLength'], $data['audience'], $data['qtyAvailable'], $data['description'], $data['price'], $data['descriptionFull'], $data['level'], $data['photo'], $data['active']);
-
+        if(isset($data)) {
+            require_once "model/annonceManager.php";
+            createArticle($data['inputName'], $data['inputAddress'], $data['inputNPA'], $data['inputCity'], $data['inputNameAnnonce'], $data['inputDescription'], $data['inputAvailableDate'], $data['inputPrice']);
         }
         else{
-            require_once "view/add-FormArticles.php";
+            require_once "view/createAd.php";
         }
 
     }catch (ModelDataException $ex){
         $articleErrorMessage = "coin";
     } finally {
-        $articles = getArticles();
-        require_once "view/articles-admin.php";
+        home();
     }
 
 }
