@@ -87,7 +87,7 @@ function modifyUserEmailM($FEmail, $NEmail){
 
     $result=false;
     $strSeparator = '\'';
-    $Query ="UPDATE users SET email =" . $strSeparator . $FEmail . $strSeparator . " WHERE email =". $strSeparator . $NEmail . $strSeparator. ";";
+    $Query ="UPDATE users SET email =" . $strSeparator . $NEmail . $strSeparator . " WHERE email =". $strSeparator . $FEmail . $strSeparator. ";";
     require_once "model/dbConnector.php";
     $queryResult=executeQueryInsert($Query);
 

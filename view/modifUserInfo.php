@@ -55,23 +55,42 @@ ob_start();
                     <!-- Contact Form -->
                     <div class="s-12 m-12 l-6">
                         <h2 class="text-uppercase text-strong margin-bottom-30">Formulaire</h2>
-                        <form class="customform" action="../index.php?action=modifAd&code=<?= $article['ID']; ?>" method="POST" enctype="multipart/form-data">
+
+                        <form class="customform" action="../index.php?action=modifUserInfo&act=email" method="POST" enctype="multipart/form-data">
                             <div class="line">
                                 <div class="margin">
                                     <div class="s-12 m-12 l-6">
                                         <div class="form-group">
-                                            <label for="inputName">Email address *</label>
-                                            <input class="form-control" type="email" name="modifUserEmailAddress" id="modifEmailAddress" placeholder="firstname@domain.ch" value="" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputAddress">Mot de passe *</label>
-                                            <input class="form-control" type="password" name="modifUserPsw" id="modifPassword" placeholder="Password" value="" required>
+                                            <label for="inputName">new Email address *</label>
+                                            <input class="form-control" type="email" name="Email" id="Email" placeholder="firstname@domain.ch" value="" required>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="s-12 m-12 l-4"><button class="submit-form button background-primary border-radius text-white" type="submit">modifier l'utilisateur</button></div>
                         </form>
+
+                        <form class="customform" action="../index.php?action=modifUserInfo&act=password" method="POST" enctype="multipart/form-data">
+                            <div class="line">
+                                <div class="margin">
+                                    <div class="s-12 m-12 l-6">
+                                        <div class="form-group">
+                                            <label for="inputAddress">Mot de passe *</label>
+                                            <input class="form-control" type="password" name="inputUserPsw" id="inputUserPsw" placeholder="Password" value="" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputName">Repeat the Password *</label>
+                                            <input class="form-control" type="password" name="inputUserPswRepeat" id="inputUserPswRepeat" placeholder="Repeat the Password" value="" required>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="s-12 m-12 l-4"><button class="submit-form button background-primary border-radius text-white" type="submit">modifier l'utilisateur</button></div>
+                        </form>
+
+
+
                     </div>
                 </div>
             </div>

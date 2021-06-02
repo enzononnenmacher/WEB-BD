@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="done with login error problem, still needs to be in red">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_03_2021_08_11__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_03_2021_08_11__Default_Changelist_.xml" afterDir="false" />
+    <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="Added 4 new functions for updating user Email and User password, 2 in controller, 2 in Model">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controler/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/controler/navigation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controler/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/controler/users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/usersManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/usersManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/modifUserInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/modifUserInfo.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +27,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="localhost" id="5c47db95-de68-4f18-9a7d-51d6a36e87ed" name="localhost" port="888" />
@@ -121,7 +122,10 @@
       <workItem from="1621522043691" duration="215000" />
       <workItem from="1622015723093" duration="3254000" />
       <workItem from="1622295489745" duration="1156000" />
-      <workItem from="1622376029110" duration="377000" />
+      <workItem from="1622376029110" duration="850000" />
+      <workItem from="1622527522819" duration="378000" />
+      <workItem from="1622527923204" duration="62000" />
+      <workItem from="1622635852010" duration="5606000" />
     </task>
     <task id="LOCAL-00001" summary="all modified">
       <created>1615188393078</created>
@@ -193,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622019596878</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added 4 new functions for updating user Email and User password, 2 in controller, 2 in Model">
+      <created>1622376865420</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1622376865420</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,7 +249,24 @@
     <MESSAGE value="fin sprint 1" />
     <MESSAGE value="fixed bad error message" />
     <MESSAGE value="wip update user psw and email" />
-    <option name="LAST_COMMIT_MESSAGE" value="wip update user psw and email" />
+    <MESSAGE value="Added 4 new functions for updating user Email and User password, 2 in controller, 2 in Model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added 4 new functions for updating user Email and User password, 2 in controller, 2 in Model" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/index.php</url>
+          <line>37</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/controler/users.php</url>
+          <line>14</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -23,6 +23,11 @@ function regForm()
     require "view/Register.php";
 }
 
+function modifUserInfoForm()
+{
+    require "view/modifUserInfo.php";
+}
+
 // Calls about page
 function about()
 {

@@ -107,17 +107,24 @@ function modifyUserPassC($request)
 }
 
 
-function modifyUserEmailC($requestEmail)
+function modifyUserEmailC($request)
 {
     if (isset($_SESSION['userEmailAddress']) && isset($request['Email'])) {
-
-        $registerPswErrorMessage = null;
         require_once "model/usersManager.php";
-        if (modifyUserEmailM($_SESSION['userEmailAddress'], $requestEmail['Email'])) {
-            $_SESSION = $requestEmail['Email'];
-            home();
-        } else {
-            $ChPswErrorMessage = "our developers don't know the reason of this error";
+        $check = checkRegister($userEmailAddress);
+        if (!(isset($check[0][0]))) {
+            $registerPswErrorMessage = null;
+            require_once "model/usersManager.php";
+            if (modifyUserEmailM($_SESSION['userEmailAddress'], $request['Email'])) {
+                logout();
+                require_once "controler/annonce.php";
+                home();
+            } else {
+                $ChPswErrorMessage = "our developers don't know the reason of this error";
+                require_once "view/register.php";
+            }
+        }else {
+            $registerErrorMessage = "Email already exists";
             require_once "view/register.php";
         }
     } else { //donnes non remplies

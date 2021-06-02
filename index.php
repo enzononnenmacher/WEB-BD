@@ -33,6 +33,17 @@ if (isset($_GET['action'])) {
                 regForm();
             }
             break;
+        case 'modifUserInfo' :
+            if(isset($_GET['act'])){
+                if ($_GET['act'] == "email"){
+                    modifyUserEmailC($_POST);
+                }else if ($_GET['act'] == "password"){
+                    modifyUserPassC($_POST);
+                }
+            }else{
+                modifUserInfoForm();
+            }
+            break;
         case 'about' :
             about();
             break;
