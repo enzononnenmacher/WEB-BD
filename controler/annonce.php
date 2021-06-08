@@ -15,14 +15,16 @@
 function all(){
 
     try{
-        require_once "model/articlesManager.php";
+        require_once "model/annonceManager.php";
         //récuperer les articles de la BD envoyés par le modèle
         $articles = getArticles();
+        $images = getImages();
+
     }
     catch (ModelDataException $ex){
         $articleErrorMessage = "Nous rencontrons temporairement un problème technique pour afficher nos produits. Désolé du dérangement";
     } finally {
-        require_once "view/articles.php";
+        require_once "view/all.php";
     }
 }
 
@@ -111,16 +113,11 @@ function modifyForm($codeInitial){
 
     try{
         require_once "model/articlesManager.php";
-        $articles = getArticles();
-        foreach ($articles as $temp){
-            if($temp['code'] == $codeInitial){
-                $article = $temp;
-            }
-        }
+        $articles = getArticleByID($codeInitial);
     }catch(ModelDataException $ex){
         $articleErrorMessages = "delete";
     } finally {
-        require_once "view/article-FormModify.php";
+        require_once "view/modifyAd.php";
     }
 
 }
@@ -134,12 +131,11 @@ function modifyAnnonce($codeInitial ,$data){
 
     try {
         require_once "model/articlesManager.php";
-        updateArticle($codeInitial ,$data['code'], $data['brand'], $data['model'], $data['snowLength'], $data['audience'], $data['qtyAvailable'], $data['description'], $data['price'], $data['descriptionFull'], $data['level'], $data['photo'], $data['active']);
-        $articles = getArticles();
+        updateArticle($codeInitial, $data['owner'], $data['address'], $data['NPA'], $data['city'], $data['title'], $data['description'], $data['disponibility'], $data['price'], $data['active']);
     }catch(ModelDataException $ex){
         $articleErrorMessages = "delete";
     } finally {
-        require_once "view/articles-admin.php";
+        myAd($_SESSION['userEmailAddress']);
     }
 
 }

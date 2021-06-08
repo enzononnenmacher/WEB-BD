@@ -66,11 +66,11 @@ if (isset($_GET['action'])) {
             adDetails($_GET['ID']);
             break;
         case 'modifAd' :
-            if(isset($_GET['code'])) {
-                modifyForm($_POST, $_GET['code']);
+            if(isset($_GET['ID'])) {
+                modifyForm($_GET['ID']);
             }
-            elseif (isset($_GET['ID'])){
-                modifyAnnonce($_GET['ID']);
+            elseif (isset($_GET['idInitial'])){
+                modifyAnnonce($_GET['idInitial'], $_POST);
             }
             break;
         case 'deleteArticle' :

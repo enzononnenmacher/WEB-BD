@@ -16,45 +16,38 @@
  * date : 03/29/2021
  * Goal : to save the info of images in Json and to save image in Directory
  */
-function imageSave($ID){
+function imageSave($userID){
 
-    $fileName = $_FILES['inputPictures']['name'];
-    $fileTmpName = $_FILES['inputPictures']['tmp_name'];
-    $fileSize = $_FILES['inputPictures']['size'];
-    $fileError = $_FILES['inputPictures']['error'];
+    $numAnn = coutAnn($userID);
+    $v = ',';
+    $s = '"';
 
-    $tmpFileExt = explode('.', $fileName);
-    $fileExt = strtolower(end($tmpFileExt));
+    $countfiles = count($_FILES['inputPictures']['name']);
+    $queryId = "SELECT MAX(id) FROM ads WHERE users_id =".$userID;
+    $adId = executeQuerySelect($queryId);
+    // Looping all files
+    for($i=0;$i<$countfiles;$i++){
 
-    $allowed = array('jpeg', 'jpg', 'png');
+        $ext = pathinfo($_FILES['inputPictures']['name'][$i], PATHINFO_EXTENSION);
+        $filename = $userID."-".$numAnn."-".$i;
+        $fileDest = 'data/images/'.$filename.".".$ext;
+        // Upload file
+        move_uploaded_file($_FILES['inputPictures']['tmp_name'][$i], $fileDest);
 
+        $query = "INSERT INTO images (name, ads_id) VALUES (".$s.$fileDest.$s.", ".$adId[0][0].");";
 
-    $fName =     $fName = $_SESSION['userEmailAddress']."-".$ID;;
-
-    if (in_array($fileExt, $allowed)) {
-        if ($fileError === 0) {
-            if ($fileSize < 1000000) {
-                $fileNameNew = $fName . "." . $fileExt;
-                $fileDestination = "data/images/" . $fileNameNew;
-                move_uploaded_file($fileTmpName, $fileDestination);
-            } else {
-
-                echo "le fichier est trop grand!";
-            }
-        } else {
-            echo "il y a eu une erreur lors du chargement!";
-        }
-    } else {
-        echo "vous ne pouvez pas uploader des fichiers de ce type!";
+        executeQueryInsert($query);
     }
-
-
-
-
-    return $fileDestination;
 
 }
 
+
+function coutAnn($userID){
+
+    $query= "SELECT COUNT(ads.id) FROM ads WHERE users_id =".$userID;
+    $result = executeQuerySelect($query);
+    return $result[0][0];
+}
 
 
 
@@ -70,10 +63,13 @@ function createArticle($inputName, $inputAddress, $inputNPA, $inputCity, $inputN
     $v = ',';
     $s = '"';
 
-    $snowDetail="INSERT INTO ads (owner, address, NPA, city, title, description, disponibility, price, active, users_id) VALUES(". $s .$inputName. $s . $v . $s . $inputAddress. $s . $v . $inputNPA . $v . $s . $inputCity. $s . $v . $s . $inputNameAnnonce. $s . $v . $s . $inputDescription. $s . $v .$s. $inputAvailableDate.$s. $v . $inputPrice. $v . $active. $v . 6 .");";
+    $query="INSERT INTO ads (owner, address, NPA, city, title, description, disponibility, price, active, users_id) VALUES(". $s .$inputName. $s . $v . $s . $inputAddress. $s . $v . $inputNPA . $v . $s . $inputCity. $s . $v . $s . $inputNameAnnonce. $s . $v . $s . $inputDescription. $s . $v .$s. $inputAvailableDate.$s. $v . $inputPrice. $v . $active. $v . $userID .");";
 
     require_once "model/dbConnector.php";
-    $result=executeQueryInsert($snowDetail);
+    $result=executeQueryInsert($query);
+
+    imageSave($userID);
+
 
 }
 
@@ -129,20 +125,30 @@ function modifAnn($toInsert, $IDToDEL)
  * date : 03/01/2021
  * Goal : to send saved information to view of all the articles
  */
-function jsonToAnnonce()
+function GetArticles()
 {
     $results= false;
     $strSeparator = '\'';
 
-    $snowQuery='SELECT code, brand, model, snowLength, price, qtyAvailable, photo, active FROM ';
+    $query='SELECT ads.id, owner, address, NPA, city, title, description, disponibility, price, active, users.email FROM ads 
+    INNER JOIN users 
+    ON ads.users_id = users.id';
 
     require_once "model/dbConnector.php";
 
 
-    return executeQuerySelect($snowQuery);
+    return executeQuerySelect($query);
 }
 
 
+
+function getImages(){
+
+    $query="SELECT name, ads_id FROM images";
+
+    require_once "model/dbConnector.php";
+    return executeQuerySelect($query);
+}
 /*
  * author : Shanshe Gundishvili
  * date : 03/01/2021
@@ -172,7 +178,7 @@ function getId(){
     require_once "model/dbConnector.php";
 
     $result=executeQuerySelect($snowDetail);
-    return $result[0];
+    return $result[0][0];
 }
 
 
@@ -195,3 +201,26 @@ function detailForAd($ID)
     return $result[0];
 }
 
+
+
+
+function getArticleByID($codeInitial){
+
+    $query="SELECT id, owner, address, NPA, city, title, description, disponibility, price, active, users.email  FROM ads WHERE id='".$codeInitial."';";
+
+    require_once "model/dbConnector.php";
+
+    $result=executeQuerySelect($query);
+
+    return $result[0];
+}
+
+function updateArticle($IDInitial ,$owner, $address, $NPA, $city, $title, $description, $disponibility, $price, $active){
+
+    $v = ',';
+    $str = '"';
+
+    $snowUpdate = 'UPDATE ads SET '.", owner =".$str.$owner.$str.", address =".$str.$address.$str.", $NPA =".$city.", title =".$str.$title.$str.", description =".$description.", disponibility =".$str.$disponibility.$str.", price =".$price.", active =".$active." WHERE id =" .$str.$IDInitial.$str.';';
+
+
+}

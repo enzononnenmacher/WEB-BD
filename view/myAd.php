@@ -26,18 +26,18 @@ ob_start();
                         <?php foreach($articles as $article) :?>
                             <div class="s-12 m-12 l-4 margin-m-bottom div-row">
                                 <br>
-                                <a href="../index.php?action=adDetails&ID=<?= $article['ID']; ?>"><img src="<?=$article['inputPictures'];?>" alt="" class="zoom"></a>
-                                <a href="../index.php?action=adDetails&ID=<?= $article['ID']; ?>"><br><strong><?=$article['inputNameAnnonce']; ?></strong><br></a>
+                                <a href="../index.php?action=adDetails&ID=<?= $article['id']; ?>"><img src="<?=$article['inputPictures'];?>" alt="" class="zoom"></a>
+                                <a href="../index.php?action=adDetails&ID=<?= $article['id']; ?>"><br><strong><?=$article['inputNameAnnonce']; ?></strong><br></a>
                                 <a><?=$article['inputPrice']; ?> CHF</a><br>
                                 <a><?=$article['inputCity']; ?></a>
 
 
 
-                                <a class="text-more-info text-primary-hover" href="../index.php?action=modifAd&ID=<?= $article['ID']; ?>">Modifier</a>
+                                <a class="text-more-info text-primary-hover" href="../index.php?action=modifAd&ID=<?= $article['id']; ?>">Modifier</a>
                                 <?php if($article['active'] == true): ?>
-                                    <a class="text-more-info text-primary-hover" href="../index.php?action=deleteArticle&ID=<?= $article['ID']; ?>">Supprimer</a>
+                                    <a class="text-more-info text-primary-hover" href="../index.php?action=deleteArticle&ID=<?= $article['id']; ?>">Supprimer</a>
                                 <?php else: ?>
-                                    <a class="text-more-info text-primary-hover" href="../index.php?action=deleteArticle&ID=<?= $article['ID']; ?>">Réactiver</a>
+                                    <a class="text-more-info text-primary-hover" href="../index.php?action=activateArticle&ID=<?= $article['id']; ?>">Réactiver</a>
                                 <?php endif; ?>
                             </div>
                         <?php endforeach; ?>

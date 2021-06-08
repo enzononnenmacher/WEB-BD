@@ -96,7 +96,7 @@ ob_start();
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputPictures">Photos de l'appartement *</label>
-                                                <input class="form-control" type="file" name="inputPictures" id="inputPictures" accept="image/x-png,image/gif,image/jpeg" placeholder="Photos" required multiple>
+                                                <input class="form-control" type="file" name="inputPictures[]" id="inputPictures" accept="image/x-png,image/gif,image/jpeg" placeholder="Photos" required multiple>
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputPrice">Prix *</label>
