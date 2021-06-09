@@ -128,8 +128,8 @@ function deleteAnn($IDToDEL, $active)
      */
     function bdToMyAnnonce($email)
     {
-
-        $snowDetail = "SELECT inputName, inputAddress, inputNPA, inputCity, inputNameAnnonce, inputDescription, inputAvailableDate, inputPictures, inputPrice FROM ads WHERE email='" . $email . "'";
+        $id = getId($email);
+        $snowDetail = "SELECT id, owner, address, NPA, city, title, description, disponibility, price, active, users.email  FROM ads WHERE email='" . $email . "';";
 
 
         require_once "model/dbConnector.php";

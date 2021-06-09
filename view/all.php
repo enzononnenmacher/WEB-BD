@@ -27,13 +27,21 @@ ob_start();
 
 
                         <?php foreach ($articles as $article) : ?>
-                            <?php if ($article['active'] == true) : ?>
+                            <?php if ($article['active'] == 1) : ?>
                                 <div class="s-12 m-12 l-4 margin-m-bottom div-row">
                                     <a>
-                                        <a href="../index.php?action=adDetails&ID=<?= $article['ID']; ?>"><img src="<?= $article['inputPictures']; ?>" alt="" class="zoom"></a>
-                                        <a href="../index.php?action=adDetails&ID=<?= $article['ID']; ?>"><br><strong><?= $article['inputNameAnnonce']; ?></strong><br></a>
-                                        <?= $article['inputPrice']; ?> CHF<br>
-                                        <?= $article['inputCity']; ?><br><br>
+                                        <?php $counter =0;?>
+                                        <a href="../index.php?action=adDetails&ID=<?= $article['id']; ?>"><?php foreach($images as $image) :?>
+
+                                            <?php if($image['ads_id'] == $article['id'] && $counter == 0) :?>
+                                                    <?php $counter =1;?>
+                                            <img src="<?= $image['name']?>" alt="" class="zoom">
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+                                        </a>
+                                        <a href="../index.php?action=adDetails&ID=<?= $article['id']; ?>"><br><strong><?= $article['title']; ?></strong><br></a>
+                                        <?= $article['price']; ?> CHF<br>
+                                        <?= $article['city']; ?><br><br>
                                     </a>
                                 </div>
                             <?php endif; ?>

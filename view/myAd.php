@@ -23,23 +23,25 @@ ob_start();
                     <div class="margin">
 
 
-                        <?php foreach($articles as $article) :?>
-                            <div class="s-12 m-12 l-4 margin-m-bottom div-row">
-                                <br>
-                                <a href="../index.php?action=adDetails&ID=<?= $article['id']; ?>"><img src="<?=$article['inputPictures'];?>" alt="" class="zoom"></a>
-                                <a href="../index.php?action=adDetails&ID=<?= $article['id']; ?>"><br><strong><?=$article['inputNameAnnonce']; ?></strong><br></a>
-                                <a><?=$article['inputPrice']; ?> CHF</a><br>
-                                <a><?=$article['inputCity']; ?></a>
+                        <?php foreach ($articles as $article) : ?>
+                            <?php if ($article['active'] == 1) : ?>
+                                <div class="s-12 m-12 l-4 margin-m-bottom div-row">
+                                    <a>
+                                        <?php $counter =0;?>
+                                        <a href="../index.php?action=adDetails&ID=<?= $article['id']; ?>"><?php foreach($images as $image) :?>
 
-
-
-                                <a class="text-more-info text-primary-hover" href="../index.php?action=modifAd&ID=<?= $article['id']; ?>">Modifier</a>
-                                <?php if($article['active'] == true): ?>
-                                    <a class="text-more-info text-primary-hover" href="../index.php?action=deleteArticle&active=0&ID=<?= $article['id']; ?>">Supprimer</a>
-                                <?php else: ?>
-                                    <a class="text-more-info text-primary-hover" href="../index.php?action=deleteArticle&active=1&ID=<?= $article['id']; ?>">Réactiver</a>
-                                <?php endif; ?>
-                            </div>
+                                                <?php if($image['ads_id'] == $article['id'] && $counter == 0) :?>
+                                                    <?php $counter =1;?>
+                                                    <img src="<?= $image['name']?>" alt="" class="zoom">
+                                                <?php endif; ?>
+                                            <?php endforeach; ?>
+                                        </a>
+                                        <a href="../index.php?action=adDetails&ID=<?= $article['id']; ?>"><br><strong><?= $article['title']; ?></strong><br></a>
+                                        <?= $article['price']; ?> CHF<br>
+                                        <?= $article['city']; ?><br><br>
+                                    </a>
+                                </div>
+                            <?php endif; ?>
                         <?php endforeach; ?>
                     </div>
                 </div>
