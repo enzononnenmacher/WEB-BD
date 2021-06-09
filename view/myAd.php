@@ -35,9 +35,9 @@ ob_start();
 
                                 <a class="text-more-info text-primary-hover" href="../index.php?action=modifAd&ID=<?= $article['id']; ?>">Modifier</a>
                                 <?php if($article['active'] == true): ?>
-                                    <a class="text-more-info text-primary-hover" href="../index.php?action=deleteArticle&ID=<?= $article['id']; ?>">Supprimer</a>
+                                    <a class="text-more-info text-primary-hover" href="../index.php?action=deleteArticle&active=0&ID=<?= $article['id']; ?>">Supprimer</a>
                                 <?php else: ?>
-                                    <a class="text-more-info text-primary-hover" href="../index.php?action=activateArticle&ID=<?= $article['id']; ?>">Réactiver</a>
+                                    <a class="text-more-info text-primary-hover" href="../index.php?action=deleteArticle&active=1&ID=<?= $article['id']; ?>">Réactiver</a>
                                 <?php endif; ?>
                             </div>
                         <?php endforeach; ?>

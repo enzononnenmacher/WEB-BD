@@ -90,9 +90,9 @@ function creationAnnonce($data){
 function myAd($email){
 
     require "model/annonceManager.php";
-    $temp = bdToMyAnnonce($email);
-    if(isset($temp)){
-    $articles = array_reverse($temp);
+    $articles = bdToMyAnnonce($email);
+    if(isset($articles)){
+    $images = getImages();
     require "view/myAd.php";
     } else{
         require "view/createAd.php";
@@ -127,11 +127,11 @@ function modifyForm($codeInitial){
  * date : 03/01/2021
  * Goal : to send the information that client user modified in one particular article
  */
-function modifyAnnonce($codeInitial ,$data){
+function modifyAnnonce($codeInitial ,$data, $active){
 
     try {
-        require_once "model/articlesManager.php";
-        updateArticle($codeInitial, $data['owner'], $data['address'], $data['NPA'], $data['city'], $data['title'], $data['description'], $data['disponibility'], $data['price'], $data['active']);
+        require_once "model/annonceManager.php";
+        updateArticle($codeInitial, $data['owner'], $data['address'], $data['NPA'], $data['city'], $data['title'], $data['description'], $data['disponibility'], $data['price'], $active);
     }catch(ModelDataException $ex){
         $articleErrorMessages = "delete";
     } finally {
@@ -146,11 +146,13 @@ function modifyAnnonce($codeInitial ,$data){
  * date : 03/01/2021
  * Goal : to send the ID of the one particular article that user wants deleted
  */
-function deleteArt($ID){
+function deleteArt($ID, $active){
 
     require "model/annonceManager.php";
-    deleteAnn($ID);
+    deleteAnn($ID, $active);
     $articles = bdToMyAnnonce($_SESSION['userEmailAddress']);
+    $images = getImages();
     require "view/myAd.php";
 
 }
+

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="added getId in user controler and added creation of articles without photos">
+    <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="WIP modifyAd.php modification d'annonce">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controler/annonce.php" beforeDir="false" afterPath="$PROJECT_DIR$/controler/annonce.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/images/enr@cpnv.ch-1.jpg" beforeDir="false" />
@@ -10,15 +10,8 @@
       <change beforePath="$PROJECT_DIR$/data/images/enr@cpnv.ch-4.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/images/enr@cpnv.ch-5.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/images/enr@cpnv.ch-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/sgi@gmail.com-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/sgi@gmail.com-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/sgi@gmail.com-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/sgi@gmail.com-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/sgi@gmail.com-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/sgi@gmail.com-6.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/annonceManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/annonceManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/createAd.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/createAd.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/modifyAd.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/modifyAd.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/myAd.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/myAd.php" afterDir="false" />
     </list>
@@ -148,7 +141,8 @@
       <workItem from="1622936031687" duration="3910000" />
       <workItem from="1622984514423" duration="1663000" />
       <workItem from="1623049796233" duration="5291000" />
-      <workItem from="1623184701502" duration="1676000" />
+      <workItem from="1623184701502" duration="1888000" />
+      <workItem from="1623225268665" duration="4939000" />
     </task>
     <task id="LOCAL-00001" summary="all modified">
       <created>1615188393078</created>
@@ -241,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622660167580</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="WIP modifyAd.php modification d'annonce">
+      <created>1623186446320</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1623186446320</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +290,8 @@
     <MESSAGE value="Added 4 new functions for updating user Email and User password, 2 in controller, 2 in Model" />
     <MESSAGE value="connected last commit to view everything works" />
     <MESSAGE value="added getId in user controler and added creation of articles without photos" />
-    <option name="LAST_COMMIT_MESSAGE" value="added getId in user controler and added creation of articles without photos" />
+    <MESSAGE value="WIP modifyAd.php modification d'annonce" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP modifyAd.php modification d'annonce" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

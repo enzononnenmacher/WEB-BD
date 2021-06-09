@@ -70,11 +70,11 @@ if (isset($_GET['action'])) {
                 modifyForm($_GET['ID']);
             }
             elseif (isset($_GET['idInitial'])){
-                modifyAnnonce($_GET['idInitial'], $_POST);
+                modifyAnnonce($_GET['idInitial'], $_POST, $_GET['active']);
             }
             break;
         case 'deleteArticle' :
-            deleteArt($_GET['ID']);
+            deleteArt($_GET['ID'], $_GET['active']);
             break;
         default :
             lost();

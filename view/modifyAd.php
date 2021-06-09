@@ -67,31 +67,31 @@ ob_start();
                                         <div class="s-12 m-12 l-6">
                                             <div class="form-group">
                                                 <label for="inputName">Nom du propriétaire *</label>
-                                                <input class="form-control" name="inputName" id="inputName" value="<?= $article['owner'] ?>" required>
+                                                <input class="form-control" name="owner" id="inputName" value="<?= $article['owner'] ?>" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputAddress">Adresse *</label>
-                                                <input class="form-control" type="text" name="inputAddress" id="inputAddress" value="<?= $article['address'] ?>" required>
+                                                <input class="form-control" type="text" name="address" id="inputAddress" value="<?= $article['address'] ?>" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputNPA">Code postal *</label>
-                                                <input class="form-control" type="number" name="inputNPA" id="inputNPA" value="<?= $article['NPA'] ?>" required>
+                                                <input class="form-control" type="number" name="NPA" id="inputNPA" value="<?= $article['NPA'] ?>" required>
                                             </div>
                                             <div>
                                                 <label for="inputCity">Ville *</label>
-                                                <input class="form-control" type="text" name="inputCity" id="inputCity" value="<?= $article['city'] ?>" required>
+                                                <input class="form-control" type="text" name="city" id="inputCity" value="<?= $article['city'] ?>" required>
                                             </div>
                                             <div>
                                                 <label for="inputNameAnnonce">Nom de l'annonce *</label>
-                                                <input class="form-control" type="text" name="inputNameAnnonce" id="inputNameAnnonce" value="<?= $article['title'] ?>"  required>
+                                                <input class="form-control" type="text" name="title" id="inputNameAnnonce" value="<?= $article['title'] ?>"  required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputDescription">Description de l'appartement *</label>
-                                                <input class="form-control" type="text" name="inputDescription" id="inputDescription" value="<?= $article['description'] ?>"  required>
+                                                <input class="form-control" type="text" name="description" id="inputDescription" value="<?= $article['description'] ?>"  required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputAvailableDate">Date de disponibilité *</label>
-                                                <input class="form-control" type="date" name="inputAvailableDate" id="inputAvailableDate" value="<?= $article['disponibility'] ?>" min="2021-01-01" required>
+                                                <input class="form-control" type="date" name="disponibility" id="inputAvailableDate" value="<?= $article['disponibility'] ?>" min="2021-01-01" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputPictures">Photos de l'appartement *</label>
@@ -99,7 +99,7 @@ ob_start();
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputPrice">Prix *</label>
-                                                <input class="form-control" type="number" name="inputPrice" id="inputPrice" value="<?= $article['price'] ?>" required>
+                                                <input class="form-control" type="number" name="price" id="inputPrice" value="<?= $article['price'] ?>" required>
                                             </div>
                                         </div>
                                     </div>
