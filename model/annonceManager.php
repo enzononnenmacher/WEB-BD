@@ -64,8 +64,9 @@ function createArticle($inputName, $inputAddress, $inputNPA, $inputCity, $inputN
 
     require_once "model/dbConnector.php";
     $result = executeQueryInsert($query);
-
+    if(isset($_FILES['inputPictures'])){
     imageSave($userID);
+    }
 
 
 }
@@ -80,13 +81,13 @@ function deleteAnn($IDToDEL, $active)
 {
 
     if ($active == 0) {
-        $query = "UPDATE ads SET active = 1 WHERE id = ".$IDToDEL.";";
-    }
-
-    if ($active == 1) {
         $query = "UPDATE ads SET active = 0 WHERE id = ".$IDToDEL.";";
     }
 
+    if ($active == 1) {
+        $query = "UPDATE ads SET active = 1 WHERE id = ".$IDToDEL.";";
+    }
+require "model/dbConnector.php";
     executeQueryInsert($query);
 
 
@@ -129,13 +130,13 @@ function deleteAnn($IDToDEL, $active)
     function bdToMyAnnonce($email)
     {
         $id = getId($email);
-        $snowDetail = "SELECT id, owner, address, NPA, city, title, description, disponibility, price, active, users.email  FROM ads WHERE email='" . $email . "';";
+        $snowDetail = "SELECT id, owner, address, NPA, city, title, description, disponibility, price, active FROM ads WHERE users_id='" . $id . "';";
 
 
         require_once "model/dbConnector.php";
 
         $result = executeQuerySelect($snowDetail);
-        return $result[0];
+        return $result;
     }
 
 
@@ -173,7 +174,7 @@ function deleteAnn($IDToDEL, $active)
     function getArticleByID($codeInitial)
     {
 
-        $query = "SELECT id, owner, address, NPA, city, title, description, disponibility, price, active, users.email  FROM ads WHERE id='" . $codeInitial . "';";
+        $query = "SELECT id, owner, address, NPA, city, title, description, disponibility, price, active  FROM ads WHERE id='" . $codeInitial . "';";
 
         require_once "model/dbConnector.php";
 

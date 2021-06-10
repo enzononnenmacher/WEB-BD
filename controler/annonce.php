@@ -112,8 +112,8 @@ function myAd($email){
 function modifyForm($codeInitial){
 
     try{
-        require_once "model/articlesManager.php";
-        $articles = getArticleByID($codeInitial);
+        require_once "model/annonceManager.php";
+        $article = getArticleByID($codeInitial);
     }catch(ModelDataException $ex){
         $articleErrorMessages = "delete";
     } finally {

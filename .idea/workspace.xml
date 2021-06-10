@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="WIP modifyAd.php modification d'annonce">
+    <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="added view">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controler/annonce.php" beforeDir="false" afterPath="$PROJECT_DIR$/controler/annonce.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controler/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/controler/users.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/images/enr@cpnv.ch-1.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/images/enr@cpnv.ch-2.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/images/enr@cpnv.ch-3.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/images/enr@cpnv.ch-4.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/images/enr@cpnv.ch-5.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/images/enr@cpnv.ch-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/annonceManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/annonceManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/modifyAd.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/modifyAd.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/myAd.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/myAd.php" afterDir="false" />
     </list>
@@ -143,6 +144,8 @@
       <workItem from="1623049796233" duration="5291000" />
       <workItem from="1623184701502" duration="1888000" />
       <workItem from="1623225268665" duration="4939000" />
+      <workItem from="1623240558057" duration="5054000" />
+      <workItem from="1623319631536" duration="3100000" />
     </task>
     <task id="LOCAL-00001" summary="all modified">
       <created>1615188393078</created>
@@ -242,7 +245,21 @@
       <option name="project" value="LOCAL" />
       <updated>1623186446320</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="modifyAd.php modification d'annonce, activer et deactiver l'annonce et myannonce">
+      <created>1623240818921</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1623240818922</updated>
+    </task>
+    <task id="LOCAL-00016" summary="added view">
+      <created>1623243118409</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1623243118409</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +308,9 @@
     <MESSAGE value="connected last commit to view everything works" />
     <MESSAGE value="added getId in user controler and added creation of articles without photos" />
     <MESSAGE value="WIP modifyAd.php modification d'annonce" />
-    <option name="LAST_COMMIT_MESSAGE" value="WIP modifyAd.php modification d'annonce" />
+    <MESSAGE value="modifyAd.php modification d'annonce, activer et deactiver l'annonce et myannonce" />
+    <MESSAGE value="added view" />
+    <option name="LAST_COMMIT_MESSAGE" value="added view" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

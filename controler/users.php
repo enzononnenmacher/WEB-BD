@@ -26,11 +26,11 @@ function login($loginRequest)
 
         } else {
             $error = 1;
-            require "view/login.php";
+            require "../view/login.php";
         }
     } else { //donnes non remplies
 
-        require "view/login.php";
+        require $_SERVER['DOCUMENT_ROOT'] . "/view/login.php";
     }
 }
 

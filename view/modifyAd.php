@@ -95,7 +95,7 @@ ob_start();
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputPictures">Photos de l'appartement *</label>
-                                                <input class="form-control" type="file" name="inputPictures" id="inputPictures" accept="image/x-png,image/jpeg" value="<?= $article['inputPictures'] ?>" multiple>
+                                                <input class="form-control" type="file" name="inputPictures" id="inputPictures" accept="image/x-png,image/jpeg" multiple>
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputPrice">Prix *</label>
