@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="added view">
+    <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="WIP modifyAd.php modification d'annonce">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_03_2021_08_11__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_03_2021_08_11__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controler/annonce.php" beforeDir="false" afterPath="$PROJECT_DIR$/controler/annonce.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controler/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/controler/users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/enr@cpnv.ch-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/enr@cpnv.ch-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/enr@cpnv.ch-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/enr@cpnv.ch-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/enr@cpnv.ch-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/enr@cpnv.ch-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/annonceManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/annonceManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/modifyAd.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/modifyAd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/myAd.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/myAd.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,6 +138,7 @@
       <workItem from="1623225268665" duration="4939000" />
       <workItem from="1623240558057" duration="5054000" />
       <workItem from="1623319631536" duration="3100000" />
+      <workItem from="1623831035864" duration="3139000" />
     </task>
     <task id="LOCAL-00001" summary="all modified">
       <created>1615188393078</created>

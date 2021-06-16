@@ -122,6 +122,10 @@ require "model/dbConnector.php";
         return executeQuerySelect($query);
     }
 
+    function getArticleDetail(){
+
+    }
+
     /*
      * author : Shanshe Gundishvili
      * date : 03/01/2021
@@ -183,13 +187,13 @@ require "model/dbConnector.php";
         return $result[0];
     }
 
-    function updateArticle($IDInitial, $owner, $address, $NPA, $city, $title, $description, $disponibility, $price, $active)
+    function updateArticle($IDInitial, $owner, $address, $NPA, $city, $title, $description, $disponibility, $price)
     {
 
         $v = ',';
         $str = '"';
 
-        $query = 'UPDATE ads SET ' . ", owner =" . $str . $owner . $str . ", address =" . $str . $address . $str . ", NPA = " . $NPA . ", city =" . $str . $city . $str . ", title =" . $str . $title . $str . ", description =" . $str . $description . $str . ", disponibility =" . $str . $disponibility . $str . ", price =" . $price . ", active =" . $active . " WHERE id =" . $IDInitial . ';';
-
+        $query = 'UPDATE ads SET ' . "owner =" . $str . $owner . $str . ", address =" . $str . $address . $str . ", NPA = " . $NPA . ", city =" . $str . $city . $str . ", title =" . $str . $title . $str . ", description =" . $str . $description . $str . ", disponibility =" . $str . $disponibility . $str . ", price =" . $price . ", active =" . 1 . " WHERE id =" . $IDInitial . ';';
+        require_once "model/dbConnector.php";
         $result = executeQueryInsert($query);
     }

@@ -40,13 +40,13 @@ function all(){
 function adDetails($code){
 
     try{
-        require_once  "model/articlesManager.php";
+        require_once  "model/annonceManager.php";
         //récuperer les articles de la BD envoyés par le modèle
         $article = getArticleDetail ($code);
     }catch(ModelDataException $ex){
         $articleErrorMessages = "Nous rencontrons temporairement des problèmes technique pour afficher nos produits";
     } finally {
-        require_once "view/article-detail.php";
+        require_once "view/adDetails.php";
     }
 
 }
@@ -89,13 +89,13 @@ function creationAnnonce($data){
  */
 function myAd($email){
 
-    require "model/annonceManager.php";
+    require_once "model/annonceManager.php";
     $articles = bdToMyAnnonce($email);
     if(isset($articles)){
     $images = getImages();
-    require "view/myAd.php";
+    require_once "view/myAd.php";
     } else{
-        require "view/createAd.php";
+        require_once "view/createAd.php";
     }
 
 }
@@ -127,11 +127,11 @@ function modifyForm($codeInitial){
  * date : 03/01/2021
  * Goal : to send the information that client user modified in one particular article
  */
-function modifyAnnonce($codeInitial ,$data, $active){
+function modifyAnnonce($codeInitial ,$data){
 
     try {
         require_once "model/annonceManager.php";
-        updateArticle($codeInitial, $data['owner'], $data['address'], $data['NPA'], $data['city'], $data['title'], $data['description'], $data['disponibility'], $data['price'], $active);
+        updateArticle($codeInitial, $data['owner'], $data['address'], $data['NPA'], $data['city'], $data['title'], $data['description'], $data['disponibility'], $data['price'], 1);
     }catch(ModelDataException $ex){
         $articleErrorMessages = "delete";
     } finally {
