@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="fixed almost everything like, wip modify, delete article is finished, myannonce is working perfectly">
+    <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="WIP modifyAd.php modification d'annonce">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_03_2021_08_11__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_03_2021_08_11__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controler/annonce.php" beforeDir="false" afterPath="$PROJECT_DIR$/controler/annonce.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
@@ -53,7 +54,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -136,12 +137,8 @@
       <workItem from="1623184701502" duration="1888000" />
       <workItem from="1623225268665" duration="4939000" />
       <workItem from="1623240558057" duration="5054000" />
-      <workItem from="1623319631536" duration="3275000" />
-      <workItem from="1623515455279" duration="2137000" />
-      <workItem from="1623771375295" duration="3306000" />
-      <workItem from="1623837456132" duration="595000" />
-      <workItem from="1623840912780" duration="3319000" />
-      <workItem from="1623911346964" duration="2431000" />
+      <workItem from="1623319631536" duration="3100000" />
+      <workItem from="1623831035864" duration="3139000" />
     </task>
     <task id="LOCAL-00001" summary="all modified">
       <created>1615188393078</created>
@@ -255,14 +252,7 @@
       <option name="project" value="LOCAL" />
       <updated>1623243118409</updated>
     </task>
-    <task id="LOCAL-00017" summary="fixed almost everything like, wip modify, delete article is finished, myannonce is working perfectly">
-      <created>1623352443346</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1623352443346</updated>
-    </task>
-    <option name="localTasksCounter" value="18" />
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,8 +303,7 @@
     <MESSAGE value="WIP modifyAd.php modification d'annonce" />
     <MESSAGE value="modifyAd.php modification d'annonce, activer et deactiver l'annonce et myannonce" />
     <MESSAGE value="added view" />
-    <MESSAGE value="fixed almost everything like, wip modify, delete article is finished, myannonce is working perfectly" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed almost everything like, wip modify, delete article is finished, myannonce is working perfectly" />
+    <option name="LAST_COMMIT_MESSAGE" value="added view" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

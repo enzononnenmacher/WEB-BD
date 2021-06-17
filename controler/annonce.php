@@ -40,13 +40,13 @@ function all(){
 function adDetails($code){
 
     try{
-        require_once  "model/articlesManager.php";
+        require_once  "model/annonceManager.php";
         //récuperer les articles de la BD envoyés par le modèle
         $article = getArticleDetail ($code);
     }catch(ModelDataException $ex){
         $articleErrorMessages = "Nous rencontrons temporairement des problèmes technique pour afficher nos produits";
     } finally {
-        require_once "view/article-detail.php";
+        require_once "view/adDetails.php";
     }
 
 }
@@ -129,15 +129,14 @@ function modifyForm($codeInitial){
  */
 function modifyAnnonce($codeInitial ,$data){
 
-
-
-        if($_FILES['inputPictures']['name'] != ""){
-            require_once "model/annonceManager.php";
-            updateImages($codeInitial);
-        }
+    try {
         require_once "model/annonceManager.php";
-        updateArticle($codeInitial, $data['owner'], $data['address'], $data['NPA'], $data['city'], $data['title'], $data['description'], $data['disponibility'], $data['price']);
+        updateArticle($codeInitial, $data['owner'], $data['address'], $data['NPA'], $data['city'], $data['title'], $data['description'], $data['disponibility'], $data['price'], 1);
+    }catch(ModelDataException $ex){
+        $articleErrorMessages = "delete";
+    } finally {
         myAd($_SESSION['userEmailAddress']);
+    }
 
 }
 
@@ -149,11 +148,11 @@ function modifyAnnonce($codeInitial ,$data){
  */
 function deleteArt($ID, $active){
 
-    require_once "model/annonceManager.php";
+    require "model/annonceManager.php";
     deleteAnn($ID, $active);
     $articles = bdToMyAnnonce($_SESSION['userEmailAddress']);
     $images = getImages();
-    require_once "view/myAd.php";
+    require "view/myAd.php";
 
 }
 
