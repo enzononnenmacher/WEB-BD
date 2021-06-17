@@ -91,7 +91,7 @@ function myAd($email){
 
     require_once "model/annonceManager.php";
     $articles = bdToMyAnnonce($email);
-    if(isset($articles)){
+    if(isset($articles[0])){
     $images = getImages();
     require_once "view/myAd.php";
     } else{
