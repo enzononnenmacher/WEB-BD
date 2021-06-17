@@ -130,8 +130,13 @@ function modifyForm($codeInitial){
 function modifyAnnonce($codeInitial ,$data){
 
     try {
+
+        if($_FILES['inputPictures']['name'] != ""){
+            require_once "model/annonceManager.php";
+            updateImages($codeInitial);
+        }
         require_once "model/annonceManager.php";
-        updateArticle($codeInitial, $data['owner'], $data['address'], $data['NPA'], $data['city'], $data['title'], $data['description'], $data['disponibility'], $data['price'], 1);
+        updateArticle($codeInitial, $data['owner'], $data['address'], $data['NPA'], $data['city'], $data['title'], $data['description'], $data['disponibility'], $data['price']);
     }catch(ModelDataException $ex){
         $articleErrorMessages = "delete";
     } finally {
