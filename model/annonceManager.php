@@ -15,7 +15,7 @@
 function imageSave($userID)
 {
 
-    $numAnn = coutAnn($userID);
+    $numAnn = countAnn($userID);
     $v = ',';
     $s = '"';
 
@@ -38,8 +38,47 @@ function imageSave($userID)
 
 }
 
+function updateImages($codeInitial){
 
-function coutAnn($userID)
+    $query = "DELETE FROM images WHERE ads_id='".$codeInitial."';";
+    require_once "model/dbConnector.php";
+    executeQueryInsert($query);
+
+    $s = '"';
+    if(is_array($_FILES['inputPictures']['name'])) {
+        $countfiles = count($_FILES['inputPictures']['name']);
+        $alone = false;
+    }else{
+        $countfiles = 1;
+        $alone = true;
+    }
+    $adId = $codeInitial;
+    // Looping all files
+    for ($i = 0; $i < $countfiles; $i++) {
+        $unique = uniqid();
+
+        // Upload file
+        if($alone){
+            $ext = pathinfo($_FILES['inputPictures']['name'], PATHINFO_EXTENSION);
+            $fileDest = 'data/images/' . $unique . "." . $ext;
+            move_uploaded_file($_FILES['inputPictures']['tmp_name'], $fileDest);
+        }else {
+            $ext = pathinfo($_FILES['inputPictures']['name'][$i], PATHINFO_EXTENSION);
+            $fileDest = 'data/images/' . $unique . "." . $ext;
+            move_uploaded_file($_FILES['inputPictures']['tmp_name'][$i], $fileDest);
+        }
+
+        $query = "INSERT INTO images (name, ads_id) VALUES (" . $s . $fileDest . $s . ", " . $adId . ");";
+
+        executeQueryInsert($query);
+    }
+
+
+
+}
+
+
+function countAnn($userID)
 {
 
     $query = "SELECT COUNT(ads.id) FROM ads WHERE users_id =" . $userID;
@@ -87,7 +126,7 @@ function deleteAnn($IDToDEL, $active)
     if ($active == 1) {
         $query = "UPDATE ads SET active = 1 WHERE id = ".$IDToDEL.";";
     }
-require "model/dbConnector.php";
+require_once "model/dbConnector.php";
     executeQueryInsert($query);
 
 
@@ -183,13 +222,13 @@ require "model/dbConnector.php";
         return $result[0];
     }
 
-    function updateArticle($IDInitial, $owner, $address, $NPA, $city, $title, $description, $disponibility, $price, $active)
+    function updateArticle($IDInitial, $owner, $address, $NPA, $city, $title, $description, $disponibility, $price)
     {
 
         $v = ',';
         $str = '"';
 
-        $query = 'UPDATE ads SET ' . ", owner =" . $str . $owner . $str . ", address =" . $str . $address . $str . ", NPA = " . $NPA . ", city =" . $str . $city . $str . ", title =" . $str . $title . $str . ", description =" . $str . $description . $str . ", disponibility =" . $str . $disponibility . $str . ", price =" . $price . ", active =" . $active . " WHERE id =" . $IDInitial . ';';
-
-        $result = executeQueryInsert($query);
+        $query = 'UPDATE ads SET ' . "owner =" . $str . $owner . $str . ", address =" . $str . $address . $str . ", NPA = " . $NPA . ", city =" . $str . $city . $str . ", title =" . $str . $title . $str . ", description =" . $str . $description . $str . ", disponibility =" . $str . $disponibility . $str . ", price =" . $price . " WHERE id =" . $IDInitial . ';';
+        require_once "model/dbConnector.php";
+        executeQueryInsert($query);
     }

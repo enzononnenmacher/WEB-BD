@@ -89,13 +89,13 @@ function creationAnnonce($data){
  */
 function myAd($email){
 
-    require "model/annonceManager.php";
+    require_once "model/annonceManager.php";
     $articles = bdToMyAnnonce($email);
     if(isset($articles)){
     $images = getImages();
-    require "view/myAd.php";
+    require_once "view/myAd.php";
     } else{
-        require "view/createAd.php";
+        require_once "view/createAd.php";
     }
 
 }
@@ -127,16 +127,17 @@ function modifyForm($codeInitial){
  * date : 03/01/2021
  * Goal : to send the information that client user modified in one particular article
  */
-function modifyAnnonce($codeInitial ,$data, $active){
+function modifyAnnonce($codeInitial ,$data){
 
-    try {
+
+
+        if($_FILES['inputPictures']['name'] != ""){
+            require_once "model/annonceManager.php";
+            updateImages($codeInitial);
+        }
         require_once "model/annonceManager.php";
-        updateArticle($codeInitial, $data['owner'], $data['address'], $data['NPA'], $data['city'], $data['title'], $data['description'], $data['disponibility'], $data['price'], $active);
-    }catch(ModelDataException $ex){
-        $articleErrorMessages = "delete";
-    } finally {
+        updateArticle($codeInitial, $data['owner'], $data['address'], $data['NPA'], $data['city'], $data['title'], $data['description'], $data['disponibility'], $data['price']);
         myAd($_SESSION['userEmailAddress']);
-    }
 
 }
 
@@ -148,11 +149,11 @@ function modifyAnnonce($codeInitial ,$data, $active){
  */
 function deleteArt($ID, $active){
 
-    require "model/annonceManager.php";
+    require_once "model/annonceManager.php";
     deleteAnn($ID, $active);
     $articles = bdToMyAnnonce($_SESSION['userEmailAddress']);
     $images = getImages();
-    require "view/myAd.php";
+    require_once "view/myAd.php";
 
 }
 

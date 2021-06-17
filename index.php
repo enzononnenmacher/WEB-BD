@@ -70,7 +70,7 @@ if (isset($_GET['action'])) {
                 modifyForm($_GET['ID']);
             }
             elseif (isset($_GET['idInitial'])){
-                modifyAnnonce($_GET['idInitial'], $_POST, $_GET['active']);
+                modifyAnnonce($_GET['idInitial'], $_POST);
             }
             break;
         case 'deleteArticle' :
