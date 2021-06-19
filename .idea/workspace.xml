@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="modify fixed">
-      <change afterPath="$PROJECT_DIR$/view/js/added.js" afterDir="false" />
+    <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="addetails reformed for multiple photos and bookmark is almost done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controler/annonce.php" beforeDir="false" afterPath="$PROJECT_DIR$/controler/annonce.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/annonceManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/annonceManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/adDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/adDetails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/css/template-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/css/template-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/gabarit.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/gabarit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/modifyAd.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/modifyAd.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +143,9 @@
       <workItem from="1623240558057" duration="5054000" />
       <workItem from="1623319631536" duration="3100000" />
       <workItem from="1623831035864" duration="3139000" />
-      <workItem from="1624094031325" duration="10835000" />
+      <workItem from="1624094031325" duration="11222000" />
+      <workItem from="1624116485880" duration="44000" />
+      <workItem from="1624116725865" duration="1131000" />
     </task>
     <task id="LOCAL-00001" summary="all modified">
       <created>1615188393078</created>
@@ -279,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623941669669</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="addetails reformed for multiple photos and bookmark is almost done">
+      <created>1624116421295</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1624116421295</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +333,8 @@
     <MESSAGE value="added view" />
     <MESSAGE value="redirection on myannonce fixed" />
     <MESSAGE value="modify fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify fixed" />
+    <MESSAGE value="addetails reformed for multiple photos and bookmark is almost done" />
+    <option name="LAST_COMMIT_MESSAGE" value="addetails reformed for multiple photos and bookmark is almost done" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

@@ -53,6 +53,13 @@ body {
   font-size: 20px;
 }
 
+.images101{
+  float: left;
+  width:  100px;
+  height: 100px;
+  object-fit: cover;
+}
+
 /* Closable button inside the image */
 .closebtn {
   position: absolute;

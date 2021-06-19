@@ -20,7 +20,7 @@ ob_start();
                 <div class="row">
                 <?php foreach ($images as $image) :?>
                         <div class="column">
-                            <img src="<?=$image['name'] ?>"  style="width:100%" onclick="myFunction(this);">
+                            <img src="<?=$image['name'] ?>" class="images101"  style="width:100%" onclick="myFunction(this);">
                         </div>
                 <?php endforeach?>
                 </div>
