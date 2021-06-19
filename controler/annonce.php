@@ -42,7 +42,8 @@ function adDetails($code){
     try{
         require_once  "model/annonceManager.php";
         //récuperer les articles de la BD envoyés par le modèle
-        $article = getArticleDetail ($code);
+        $article = getArticleByID($code);
+        $images = getImagesByID($code);
     }catch(ModelDataException $ex){
         $articleErrorMessages = "Nous rencontrons temporairement des problèmes technique pour afficher nos produits";
     } finally {
@@ -161,3 +162,17 @@ function deleteArt($ID, $active){
 
 }
 
+
+
+function bookmark($id){
+    require_once 'model/annonceManager.php';
+    bookmarkAnn($id);
+    all();
+}
+
+
+function bookmarks(){
+
+    $data = unserialize($_COOKIE['bookmarks'], ["allowed_classes" => false]);
+
+}

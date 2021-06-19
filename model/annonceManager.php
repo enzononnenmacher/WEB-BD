@@ -161,6 +161,15 @@ require_once "model/dbConnector.php";
         return executeQuerySelect($query);
     }
 
+    function getImagesByID($id)
+    {
+
+        $query = "SELECT name, ads_id FROM images WHERE ads_id =".$id.";";
+
+        require_once "model/dbConnector.php";
+        return executeQuerySelect($query);
+    }
+
     /*
      * author : Shanshe Gundishvili
      * date : 03/01/2021
@@ -213,14 +222,27 @@ require_once "model/dbConnector.php";
     function getArticleByID($codeInitial)
     {
 
-        $query = "SELECT id, owner, address, NPA, city, title, description, disponibility, price, active  FROM ads WHERE id='" . $codeInitial . "';";
+        $query = "SELECT id, owner, address, NPA, city, title, description, disponibility, price, active, users_id  FROM ads WHERE id='" . $codeInitial . "';";
 
         require_once "model/dbConnector.php";
 
         $result = executeQuerySelect($query);
 
+        $result[0]['email'] = getEmail($result[0]['users_id']);
         return $result[0];
     }
+
+    function getEmail($id){
+        $query = "SELECT email FROM users WHERE id = ".$id.";";
+
+        require_once "model/dbConnector.php";
+
+        $result = executeQuerySelect($query);
+
+        return $result[0][0];
+    }
+
+
 
     function updateArticle($IDInitial, $owner, $address, $NPA, $city, $title, $description, $disponibility, $price)
     {
@@ -231,4 +253,18 @@ require_once "model/dbConnector.php";
         $query = 'UPDATE ads SET ' . "owner =" . $str . $owner . $str . ", address =" . $str . $address . $str . ", NPA = " . $NPA . ", city =" . $str . $city . $str . ", title =" . $str . $title . $str . ", description =" . $str . $description . $str . ", disponibility =" . $str . $disponibility . $str . ", price =" . $price . " WHERE id =" . $IDInitial . ';';
         require_once "model/dbConnector.php";
         executeQueryInsert($query);
+    }
+
+    function bookmarkAnn($id){
+
+        if(isset($_COOKIE['bookmarks'])){
+            $data = unserialize($_COOKIE['bookmarks'], ["allowed_classes" => false]);
+            $data[$id] = $id;
+            setcookie("bookmarks","", time() - 3600, '/');
+        }else{
+            $data[$id] = $id;
+        }
+        setcookie("bookmarks", serialize($data), time() + 2592000);
+
+
     }

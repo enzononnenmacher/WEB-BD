@@ -65,6 +65,14 @@ if (isset($_GET['action'])) {
         case 'adDetails' :
             adDetails($_GET['ID']);
             break;
+        case 'bookmark' :
+            if(isset($_GET['id'])){
+                bookmark($_GET['id']);
+            }
+            else{
+                bookmarks();
+            }
+            break;
         case 'modifAd' :
             if(isset($_GET['ID'])) {
                 modifyForm($_GET['ID']);

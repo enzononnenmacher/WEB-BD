@@ -25,6 +25,7 @@
     <script type="text/javascript" src="view/js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="view/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="view/js/validation.js"></script>
+    <script type="text/javascript" src="view/js/added.js"></script>
   </head>  
   
   <body class="size-1140">

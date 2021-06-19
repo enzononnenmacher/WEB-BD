@@ -16,24 +16,36 @@ ob_start();
 <div class="section background-white">
     <div class="line">
         <div class="margin">
-            <div class="row1">
-                <img  class="zoom2" src="<?=$article['inputPictures'] ?>" alt="">
+            <div class="split left">
+                <div class="row">
+                <?php foreach ($images as $image) :?>
+                        <div class="column">
+                            <img src="<?=$image['name'] ?>"  style="width:100%" onclick="myFunction(this);">
+                        </div>
+                <?php endforeach?>
+                </div>
+                <div class="container">
+                    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                    <img id="expandedImg" style="width:100%">
+                </div>
             </div>
-            <div class="row2">
-                <br><strong>Nom du propriétaire :</strong> <a class="size-texte3"><?=$article['inputName']; ?></a><br>
-                <strong>Adresse : </strong><a class="size-texte3"><?=$article['inputAddress']; ?></a><br>
-                <strong>Code postal : </strong><a class="size-texte3"><?=$article['inputNPA']; ?></a><br>
-                <strong>Ville : </strong><a class="size-texte3"><?=$article['inputCity']; ?></a><br>
-                <strong>Date de disponibilité : </strong><a class="size-texte3"><?=$article['inputAvailableDate']; ?></a><br>
-                <strong>Prix : </strong><a class="size-texte3"><?=$article['inputPrice']; ?> CHF</a><br><br>
-                <a class="size-texte3"><?=$article['inputDescription']; ?></a><br><br>
-            </div>
-            <div class="row1">
-                <br><strong>Nom de l'annonce :</strong> <br>
-                <a class="size-texte3"><?=$article['inputNameAnnonce']; ?></a><br><br><br>
-            </div>
-            <div class="row2">
-                <a href="mailto:<?=$article['Email']; ?>" class="submit-form button background-primary border-radius text-white">Envoyer un message à l'annonceur</a>
+            <div class="split right">
+                <div class="row2">
+                    <br><strong>Nom du propriétaire :</strong> <a class="size-texte3"><?=$article['owner']; ?></a><br>
+                    <strong>Adresse : </strong><a class="size-texte3"><?=$article['address']; ?></a><br>
+                    <strong>Code postal : </strong><a class="size-texte3"><?=$article['NPA']; ?></a><br>
+                    <strong>Ville : </strong><a class="size-texte3"><?=$article['city']; ?></a><br>
+                    <strong>Date de disponibilité : </strong><a class="size-texte3"><?=$article['disponibility']; ?></a><br>
+                    <strong>Prix : </strong><a class="size-texte3"><?=$article['price']; ?> CHF</a><br><br>
+                    <a class="size-texte3"><?=$article['description']; ?></a><br><br>
+                </div>
+                <div class="row1">
+                    <br><strong>Nom de l'annonce :</strong> <br>
+                    <a class="size-texte3"><?=$article['title']; ?></a><br><br><br>
+                </div>
+                <div class="row2">
+                    <a href="mailto:<?=$article['email']; ?>" class="submit-form button background-primary border-radius text-white">Envoyer un message à l'annonceur</a>
+                </div>
             </div>
         </div>
     </div>

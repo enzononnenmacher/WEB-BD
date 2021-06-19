@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="redirection on myannonce fixed">
+    <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="modify fixed">
+      <change afterPath="$PROJECT_DIR$/view/js/added.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controler/annonce.php" beforeDir="false" afterPath="$PROJECT_DIR$/controler/annonce.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/annonceManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/annonceManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/adDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/adDetails.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/css/template-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/css/template-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/gabarit.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/gabarit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/modifyAd.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/modifyAd.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +19,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -27,6 +41,7 @@
   <component name="PhpServers">
     <servers>
       <server host="localhost" id="5c47db95-de68-4f18-9a7d-51d6a36e87ed" name="localhost" port="888" />
+      <server host="localhost" id="e3bbe383-3a67-4d4a-bd27-b2d32be70227" name="localhost (1)" port="8080" />
     </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
@@ -136,6 +151,7 @@
       <workItem from="1623240558057" duration="5054000" />
       <workItem from="1623319631536" duration="3100000" />
       <workItem from="1623831035864" duration="3139000" />
+      <workItem from="1624094031325" duration="10835000" />
     </task>
     <task id="LOCAL-00001" summary="all modified">
       <created>1615188393078</created>
@@ -256,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623940374908</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="modify fixed">
+      <created>1623941669669</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1623941669669</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,7 +331,15 @@
     <MESSAGE value="modifyAd.php modification d'annonce, activer et deactiver l'annonce et myannonce" />
     <MESSAGE value="added view" />
     <MESSAGE value="redirection on myannonce fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="redirection on myannonce fixed" />
+    <MESSAGE value="modify fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify fixed" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="index.php">
+        <watch expression="$_SERVER" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
