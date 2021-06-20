@@ -53,7 +53,7 @@
                     <li><a href="index.php?action=login">Connexion</a></li>
                     <li><a href="index.php?action=register">S'inscrire</a></li>
                 <?php endif; ?>
-
+                <li><a href="index.php?action=contact">Panier</a></li>
             </ul>
           </div>
         </div>

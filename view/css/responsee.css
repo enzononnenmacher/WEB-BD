@@ -1165,6 +1165,7 @@ nav.breadcrumb-nav ul li:last-child:after {content:"";}
 .row2{
   width: 50%;
   float: right;
+  padding-bottom: 100px;
 }
 
 .imgAcceuil{
