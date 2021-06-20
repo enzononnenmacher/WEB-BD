@@ -46,7 +46,17 @@ ob_start();
                 <div class="row2">
                     <a href="mailto:<?=$article['email']; ?>" class="submit-form button background-primary border-radius text-white">Envoyer un message à l'annonceur</a>
                 </div>
-            </div>
+
+                <div>
+                    <?php if (!isset($bookmarks[$article['id']])) : ?>
+                        <?php if (isset($_SESSION['userEmailAddress'])) :?>
+                            <?php if ($article['email'] != $_SESSION['userEmailAddress']) :?>
+                            <a href="index.php?action=bookmark&id=<?=$article['id']; ?>" class="submit-form button background-primary border-radius text-white">Bookmark</a>
+                            <?php endif; ?>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                </div>
+        </div>
         </div>
     </div>
 </div>

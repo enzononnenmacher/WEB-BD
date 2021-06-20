@@ -44,6 +44,12 @@ function adDetails($code){
         //récuperer les articles de la BD envoyés par le modèle
         $article = getArticleByID($code);
         $images = getImagesByID($code);
+        if(isset($_COOKIE['bookmarks'])){
+            $bookmarks = getBookmark();
+        }else{
+            $bookmarks['checker'] = "checker";
+        }
+
     }catch(ModelDataException $ex){
         $articleErrorMessages = "Nous rencontrons temporairement des problèmes technique pour afficher nos produits";
     } finally {
@@ -132,7 +138,7 @@ function modifyAnnonce($codeInitial ,$data){
 
     try {
 
-        if($_FILES['inputPictures']['name'] != ""){
+        if($_FILES['inputPictures']['name'][0] != ""){
             require_once "model/annonceManager.php";
             updateImages($codeInitial);
         }
@@ -173,6 +179,26 @@ function bookmark($id){
 
 function bookmarks(){
 
-    $data = unserialize($_COOKIE['bookmarks'], ["allowed_classes" => false]);
+    require_once 'model/annonceManager.php';
+    $bookmarks = getBookmark();
+    if(isset($bookmarks)&&!empty($bookmarks)){
+        $articles = getArticles();
+        $images = getImages();
+        require_once 'view/bookmarks.php';
+    }else{
+        all();
+    }
 
+}
+
+function delBookmarks($id){
+    require_once 'model/annonceManager.php';
+    $bookmarks = delBookmarksM($id);
+    if(isset($bookmarks)&&!empty($bookmarks)){
+        $articles = getArticles();
+        $images = getImages();
+        require_once 'view/bookmarks.php';
+    }else{
+        all();
+    }
 }

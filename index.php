@@ -73,6 +73,9 @@ if (isset($_GET['action'])) {
                 bookmarks();
             }
             break;
+        case 'DelBookmark' :
+            delBookmarks($_GET['id']);
+            break;
         case 'modifAd' :
             if(isset($_GET['ID'])) {
                 modifyForm($_GET['ID']);

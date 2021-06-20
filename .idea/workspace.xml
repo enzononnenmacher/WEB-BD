@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="addetails reformed for multiple photos and bookmark is almost done">
+    <list default="true" id="2aca36c9-dd50-4c1a-8980-38f9d658299c" name="Default Changelist" comment="frontend addetails updated">
+      <change afterPath="$PROJECT_DIR$/view/bookmarks.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controler/annonce.php" beforeDir="false" afterPath="$PROJECT_DIR$/controler/annonce.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/annonceManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/annonceManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/adDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/adDetails.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/gabarit.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/gabarit.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -47,6 +54,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -145,7 +153,7 @@
       <workItem from="1623831035864" duration="3139000" />
       <workItem from="1624094031325" duration="11222000" />
       <workItem from="1624116485880" duration="44000" />
-      <workItem from="1624116725865" duration="1131000" />
+      <workItem from="1624116725865" duration="11689000" />
     </task>
     <task id="LOCAL-00001" summary="all modified">
       <created>1615188393078</created>
@@ -280,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624116421295</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="frontend addetails updated">
+      <created>1624131607760</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1624131607760</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +349,8 @@
     <MESSAGE value="redirection on myannonce fixed" />
     <MESSAGE value="modify fixed" />
     <MESSAGE value="addetails reformed for multiple photos and bookmark is almost done" />
-    <option name="LAST_COMMIT_MESSAGE" value="addetails reformed for multiple photos and bookmark is almost done" />
+    <MESSAGE value="frontend addetails updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="frontend addetails updated" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
