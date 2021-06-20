@@ -1,16 +1,15 @@
 <?php
-/*
- * author : Shanshe Gundishvili
- * date : 03/01/2021
- * Goal : to link view and model of articles
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 03/01/2021
+ * @Goal : to link view and model of articles
  */
 
 
-
-/*
- * author : Shanshe Gundishvili
- * date : 03/01/2021
- * Goal : to send information of all articles from model to view
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to send information of all articles from model to view
  */
 function all(){
 
@@ -32,10 +31,10 @@ function all(){
 
 
 
-/*
- * author : Shanshe Gundishvili
- * date : 03/01/2021
- * Goal : to send information of one particular article
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to send information of one specific article from model to view
  */
 function adDetails($code){
 
@@ -61,10 +60,10 @@ function adDetails($code){
 
 
 
-/*
- * author : Shanshe Gundishvili
- * date : 03/01/2021
- * Goal : to send new article's info to model
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to send information of new article from view to model
  */
 function creationAnnonce($data){
 
@@ -89,10 +88,10 @@ function creationAnnonce($data){
 
 
 
-/*
- * author : Shanshe Gundishvili
- * date : 03/01/2021
- * Goal : to send information of only articles that are created by the Email used by client
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to send information of all articles from model to view that is of the user in session
  */
 function myAd($email){
 
@@ -111,10 +110,10 @@ function myAd($email){
 
 
 
-/*
- * author : Shanshe Gundishvili
- * date : 03/01/2021
- * Goal : to send info of one particular article that client user wants to modify
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to send to send client to modify one specific article
  */
 function modifyForm($codeInitial){
 
@@ -129,10 +128,10 @@ function modifyForm($codeInitial){
 
 }
 
-/*
- * author : Shanshe Gundishvili
- * date : 03/01/2021
- * Goal : to send the information that client user modified in one particular article
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to send information of one specific articles from view to model
  */
 function modifyAnnonce($codeInitial ,$data){
 
@@ -153,10 +152,10 @@ function modifyAnnonce($codeInitial ,$data){
 }
 
 
-/*
- * author : Shanshe Gundishvili
- * date : 03/01/2021
- * Goal : to send the ID of the one particular article that user wants deleted
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to send information of one specific article to delete in model
  */
 function deleteArt($ID, $active){
 
@@ -169,14 +168,22 @@ function deleteArt($ID, $active){
 }
 
 
-
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to send information of one specific article to model to bookmark it
+ */
 function bookmark($id){
     require_once 'model/annonceManager.php';
     bookmarkAnn($id);
     all();
 }
 
-
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to redirect client to bookmarks, and to fetch information about bookmarked articles
+ */
 function bookmarks(){
 
     require_once 'model/annonceManager.php';
@@ -191,6 +198,12 @@ function bookmarks(){
 
 }
 
+
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to send information of one specific article that needs to be deleted from bookmarks
+ */
 function delBookmarks($id){
     require_once 'model/annonceManager.php';
     $bookmarks = delBookmarksM($id);

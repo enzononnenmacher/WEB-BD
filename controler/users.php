@@ -2,12 +2,15 @@
  * @file users.php
  * @@brief     This file is the rooter managing the link with controllers.
  * @param $loginRequest
- * @author    Updated by Nicolas.GLASSEY
- * @version   13-APR-2020
- * @author    Created by Pascal.BENZONANA
+ * @author    Updated by Shanshe Gundishvili
+ * @version   10.05.2021
  */
 
-
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to log in a client in his account
+ */
 function login($loginRequest)
 {
     $error = 0;
@@ -34,7 +37,11 @@ function login($loginRequest)
     }
 }
 
-
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to log user out of his account
+ */
 function logout()
 {
     $_SESSION = array();
@@ -42,6 +49,11 @@ function logout()
     require "view/home.php";
 }
 
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to register new user/client in database
+ */
 function register($registerRequest)
 {
     try {
@@ -83,7 +95,11 @@ function register($registerRequest)
     }
 }
 
-
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to modify password of existing user
+ */
 function modifyUserPassC($request)
 {
     $endToken = array();
@@ -106,7 +122,11 @@ function modifyUserPassC($request)
     }
 }
 
-
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to modify Email of existing user
+ */
 function modifyUserEmailC($request)
 {
     if (isset($_SESSION['userEmailAddress']) && isset($request['Email'])) {

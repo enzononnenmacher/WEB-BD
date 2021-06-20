@@ -1,16 +1,16 @@
 <?php
 
-/*
- * author : Shanshe Gundishvili
- * date : 03/01/2021
- * Goal : to menage articles
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to treat information provided from view via controller
  */
 
 
-/*
- * author : Shanshe Gundishvili
- * date : 03/29/2021
- * Goal : to save the info of images in Json and to save image in Directory
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to save images or image
  */
 function imageSave($userID)
 {
@@ -38,6 +38,12 @@ function imageSave($userID)
 
 }
 
+
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to update images or image of one specific article
+ */
 function updateImages($codeInitial)
 {
 
@@ -78,6 +84,11 @@ function updateImages($codeInitial)
 }
 
 
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to count articles of one specific user
+ */
 function countAnn($userID)
 {
 
@@ -87,10 +98,10 @@ function countAnn($userID)
 }
 
 
-/*
- * author : Shanshe Gundishvili
- * date : 03/01/2021
- * Goal : to save information filled by User
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to create article that was provided by client
  */
 function createArticle($inputName, $inputAddress, $inputNPA, $inputCity, $inputNameAnnonce, $inputDescription, $inputAvailableDate, $inputPrice)
 {
@@ -111,10 +122,10 @@ function createArticle($inputName, $inputAddress, $inputNPA, $inputCity, $inputN
 }
 
 
-/*
- * author : Shanshe Gundishvili
- * date : 03/01/2021
- * Goal : to delete or reactivate the article
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to deactivate article that was provided by client
  */
 function deleteAnn($IDToDEL, $active)
 {
@@ -132,10 +143,10 @@ function deleteAnn($IDToDEL, $active)
 
 }
 
-/*
- * author : Shanshe Gundishvili
- * date : 03/01/2021
- * Goal : to send saved information to view of all the articles
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to fetch all articles created by all users
  */
 function getArticles()
 {
@@ -152,7 +163,11 @@ function getArticles()
     return executeQuerySelect($query);
 }
 
-
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to fetch all images of all articles created by all users
+ */
 function getImages()
 {
 
@@ -162,6 +177,12 @@ function getImages()
     return executeQuerySelect($query);
 }
 
+
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to get images/image of one specific article
+ */
 function getImagesByID($id)
 {
 
@@ -171,10 +192,10 @@ function getImagesByID($id)
     return executeQuerySelect($query);
 }
 
-/*
- * author : Shanshe Gundishvili
- * date : 03/01/2021
- * Goal : to only send the articles made by user that is logged in on the side by device
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to fetch information about articles created by one specific user
  */
 function bdToMyAnnonce($email)
 {
@@ -189,6 +210,11 @@ function bdToMyAnnonce($email)
 }
 
 
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to get user's id and save it in SESSION
+ */
 function getId()
 {
 
@@ -203,23 +229,12 @@ function getId()
 }
 
 
-/*
- * author : Shanshe Gundishvili
- * date : 03/01/2021
- * Goal : to only send one particular article's information
+
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to fetch information of one specific article form database
  */
-function detailForAd($ID)
-{
-    $Detail = "SELECT code, brand, model, snowLength, price, qtyAvailable, photo, active, description, descriptionFull FROM snows WHERE id='" . $ID . "'";
-
-
-    require_once "model/dbConnector.php";
-
-    $result = executeQuerySelect($Detail);
-    return $result[0];
-}
-
-
 function getArticleByID($codeInitial)
 {
 
@@ -233,6 +248,13 @@ function getArticleByID($codeInitial)
     return $result[0];
 }
 
+
+
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to fetch email from database using ID of user
+ */
 function getEmail($id)
 {
     $query = "SELECT email FROM users WHERE id = " . $id . ";";
@@ -245,6 +267,12 @@ function getEmail($id)
 }
 
 
+
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to update information of one specific article
+ */
 function updateArticle($IDInitial, $owner, $address, $NPA, $city, $title, $description, $disponibility, $price)
 {
 
@@ -256,6 +284,12 @@ function updateArticle($IDInitial, $owner, $address, $NPA, $city, $title, $descr
     executeQueryInsert($query);
 }
 
+
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to bookmark one specific article
+ */
 function bookmarkAnn($id)
 {
 
@@ -271,16 +305,25 @@ function bookmarkAnn($id)
 
 }
 
+
+
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to fetch ids of bookmarked articles
+ */
 function getBookmark()
 {
 
     $data = unserialize($_COOKIE['bookmarks'], ["allowed_classes" => false]);
-
-
     return $data;
 }
 
-
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to remove articles that was previously bookmarked from being bookmarked
+ */
 function delBookmarksM($id){
 
     $data = unserialize($_COOKIE['bookmarks'], ["allowed_classes" => false]);

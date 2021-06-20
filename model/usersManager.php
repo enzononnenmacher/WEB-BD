@@ -1,7 +1,14 @@
 <?php
 /**
- * @param $userEmailAddress
- * @param $userPsw
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to treat user's information
+ */
+
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to check if login is correct, provided by user
  */
 function isLoginCorrect($userEmailAddress, $userPsw)
 {
@@ -28,6 +35,12 @@ function isLoginCorrect($userEmailAddress, $userPsw)
     return $result;
 }
 
+
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to register new account
+ */
 function registerNewAccount($userEmailAddress, $userPsw){
 
     $result=false;
@@ -41,7 +54,11 @@ function registerNewAccount($userEmailAddress, $userPsw){
     return $result;
 }
 
-
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to fetch user's type
+ */
 function getUserType($userEmailAddress)
 {
 
@@ -57,6 +74,13 @@ function getUserType($userEmailAddress)
     }
 }
 
+
+
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to check if register information is right
+ */
 function checkRegister($email){
 
     $strSeparator = '\'';
@@ -69,7 +93,11 @@ function checkRegister($email){
 
 }
 
-
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to modify user's password
+ */
 function modifyUserPassM($email, $password){
 
     $result=false;
@@ -83,6 +111,12 @@ function modifyUserPassM($email, $password){
     return $result;
 }
 
+
+/**
+ * @author : Shanshe Gundishvili
+ * @date : 20/05/2021
+ * @Goal : to modify user's Email
+ */
 function modifyUserEmailM($FEmail, $NEmail){
 
     $result=false;
